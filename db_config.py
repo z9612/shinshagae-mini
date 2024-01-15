@@ -33,7 +33,7 @@ class EventDao:
             case '높음' :
                 priority = 'event-important'
             case '중간' :
-                priority = 'event-error'
+                priority = 'event-info'
             case '낮음' :
                 priority = ''
 

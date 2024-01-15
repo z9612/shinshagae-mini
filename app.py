@@ -42,7 +42,7 @@ def calendar_events():
         cursor = conn.cursor(pymysql.cursors.DictCursor)
 
         ## 자기자신의 일정만 보이게하기 where문에 추가 필요
-        cursor.execute("SELECT id, title, url, class, UNIX_TIMESTAMP(start_date)*1000 as start, UNIX_TIMESTAMP(end_date)*1000 as end FROM event") 
+        cursor.execute("SELECT id, title, url, class, UNIX_TIMESTAMP(start_date)*1000 as start, UNIX_TIMESTAMP(end_date)*1000 as end, memo FROM event") 
         rows = cursor.fetchall()
         resp = jsonify({'success' : 1, 'result' : rows})
         resp.status_code = 200
