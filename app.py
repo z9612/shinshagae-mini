@@ -14,6 +14,23 @@ event_dao = db_config.EventDao()
 def home():
     return render_template('calendar_events.html')
 
+@app.route('/datepicker')
+def datapicker():
+    return render_template('datepicker.html')
+
+# #한 이벤트 상세보기
+# @app.route('/calendar_events.html/<event_id>')
+# def select_one(event_id):
+#     result = event_dao.select_one(event_id)
+#     print("result :: " , result)
+#     return render_template('result_data.html', result=result)
+
+#한 이벤트 상세보기
+@app.route('/calendar_events.html/<event_id>')
+def select_one(event_id):
+    result = event_dao.select_one(event_id)
+    print("result :: " , result)
+    return render_template('result_data.html', result=result)
 
 @app.route('/insert_event', methods=['POST'])
 def insert_event():
@@ -32,12 +49,28 @@ def insert_event():
 
     return redirect(url_for("home"))
 
+    
+@app.route('/update_event')
+def update_event():
+    #수정할 이벤트 번호, 내용 등 입력받기
+    event_dao.update_event(1)
+
+    return redirect(url_for("home"))
+
+@app.route('/delete_event')
+def delete_event():
+    #삭제할 이벤트 번호 입력받기
+
+    event_dao.delete_event(1)
+
+    return redirect(url_for("home"))
 
 @app.route('/calendar-events')
 def calendar_events():
     conn = None
     cursor = None
     try:
+        
         conn = db_config.db_connection.get_db()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
 

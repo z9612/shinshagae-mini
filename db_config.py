@@ -24,6 +24,16 @@ class EventDao:
 
         db_connection.get_db().close()
         return result
+    
+    def select_one(self,event_id):
+        cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
+        print("받은 event_id ::: ", event_id)
+        sql = "SELECT * FROM event where id=%s;"
+        cursor.execute(sql,(event_id))
+        result = cursor.fetchone()
+        
+        db_connection.get_db().close()
+        return result
         
     def insert_event(self, title, memo, start_date, end_date, url, priority):
         cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
@@ -46,23 +56,23 @@ class EventDao:
         db_connection.get_db().close()
         return result
     
-    # def update_book(self, bookid, bookname, publisher, price):
-    #     cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
-    #     sql = "update book set bookname=%s, publisher=%s, price=%s where bookid=%s"
-    #     result = cursor.execute(sql,(bookname, publisher, price, bookid))
+    def update_event(self, event_id, title, memo, start_date, end_date, url, priority):
+        cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
+        sql = "update book set title=%s, memo=%s, start_date=%s end_date=%s priority=%s where event_id=%s"
+        result = cursor.execute(sql,(title, memo, start_date, end_date, url, priority,event_id))
 
-    #     print(f"update_num :: {result}")
+        print(f"update_num :: {result}")
 
-    #     db_connection.get_db().close()
-    #     return result
+        db_connection.get_db().close()
+        return result
         
-    # def delete_book(self, bookid):
-    #     cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
-    #     sql = "delete from book where bookid=%s"
+    def delete_event(self, eventid):
+        cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
+        sql = "delete from event where id=%s"
 
-    #     result = cursor.execute(sql,(bookid))
+        result = cursor.execute(sql,(eventid))
 
-    #     print(f"delete_num :: {result}")
+        print(f"delete_num :: {result}")
 
-    #     db_connection.get_db().close()
-    #     return result
+        db_connection.get_db().close()
+        return result
