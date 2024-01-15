@@ -1,8 +1,11 @@
 import pymysql
 import db_config 
 from flask import Flask, render_template, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app)
 
 @app.route('/')
 def home():
@@ -19,6 +22,7 @@ def calendar_events():
         rows = cursor.fetchall()
         resp = jsonify({'success' : 1, 'result' : rows})
         resp.status_code = 200
+        print(resp)
         return resp
     except Exception as e:
         print(e)
@@ -27,4 +31,4 @@ def calendar_events():
         conn.close()
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
