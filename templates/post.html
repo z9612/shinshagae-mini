@@ -1,24 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시글 </title>
+    <script>
+        function confirmDelete() {
+            return confirm("삭제 하시겠습니까?")
+        }
+        function confirmUpdate() {
+            return confrim("수정 하시겠습니까?")
+        }
+    </script>
 </head>
-<body>
 
+<body>
+    
     제목 <br> {{title}}
     <br><br>
     내용 <br>{{content}}
     <br>
-    
-    <button><a href="makepost.html">게시글 수정</a></button>
-    <button>게시글 삭제</button>
+ 
+    <form action='/board' method="get">
+        <button type='submit'>목록</button>
+    </form>
+    <form id="updateForm" action="{{ url_for('update_list', postno=postno )}}" method="post" 
+        onsubmit="return confirmUpdate()">
+        <button>게시글 수정</button>
+    </form>
+
+    <form id="deleteForm" action="{{ url_for('delete_list', postno=postno) }} " method="post"
+        onsubmit="return confirmDelete()">
+        <button type='submit'>게시글 삭제</button>
+    </form>
 
     <br>
     <br>
     <br>
-    <input type="text">
-    <button>댓글 입력</button>
+    
+    <div>
+        <form action="write_comment_action" method="post">
+            <p>작성자</p>
+            <input type="text" id="writer" name="writer" class="form-control"><br>
+
+            <p>내용</p>
+            <textarea id="content" name="content" class="form-control"></textarea>
+            
+            <input type="hidden" name="postno" value="{{ postno }}">
+
+            <div class="form-row float-right">
+                <button type="submit" class="btn btn-primary">댓글 입력</button>
+
+            </div>
+        </form>
+    </div>
+
+    
+    <table>
+        <thead>
+            <tr>
+                <td>작성자</td>
+                <td>내용</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for i in comment_list %}
+            <tr>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td><form id="deleteFromComment" action="{{url_for('delete_comment_list',commentno=i[0])}}" 
+                    method="post" onsubmit="return confirmDelete()">
+                        <button type="submit">X</button>
+                    </form></td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
+
 </html>

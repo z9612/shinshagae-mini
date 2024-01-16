@@ -33,7 +33,7 @@
                 {% for i in data_list %}
                 <tr>
                     <td>{{ i[0] }}</td>
-                    <td><a href="{{ url_for('post', writer=i[2], other_value=i[3]) }}">{{ i[2] }}</a></td>
+                    <td><a href="{{ url_for('post', writer=i[2], other_value=i[3], other_value2=i[0]) }}">{{ i[2] }}</a>  [{{i[5]}}]</td>
                     <td>{{ i[1] }}</td>
                     <td>{{ i[4] }}</td>
                 </tr>
