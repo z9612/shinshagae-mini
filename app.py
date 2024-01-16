@@ -32,6 +32,8 @@ def select_one(event_id):
 @app.route('/insert_event', methods=['POST'])
 def insert_event():
     #실제 db에 insert 하기
+
+    #userno = userno
     event_name = request.form['event_name']
     memo = request.form['memo']
     from_date = request.form['from_date']
