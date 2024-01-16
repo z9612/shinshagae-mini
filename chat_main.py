@@ -2,17 +2,15 @@ from flask import *
 import chatdb 
 import msgdb
 
-app =Flask(__name__)
 
-@app.route("/chatroom")
+chat_bp = Blueprint("chat",__name__)
+
+@chat_bp.route("/chatroom")
 def index():
    return render_template('chatroom.html')
 
 
-
-
-
-@app.route('/chatroom/chat',methods=['POST','GET'])
+@chat_bp.route('/chatroom/chat',methods=['POST','GET'])
 def chat():
     if request.method=='POST':
             chatid=request.form["chatid"]
@@ -43,7 +41,7 @@ def chat():
 
     else:
           return 'no data'
-@app.route('/chatroom/chatting',methods=['POST'])
+@chat_bp.route('/chatroom/chatting',methods=['POST'])
 def chatting():
     text=request.form['text']
     chatid=request.form['chatid']
@@ -76,4 +74,4 @@ def chatting():
 
 
 if(__name__=='__main__'):
-   app.run(debug=True)
+   chat_bp.run(debug=True)
