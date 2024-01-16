@@ -130,8 +130,9 @@
 				var calendar = $('#calendar').calendar(options);
 				
 				$("#from_date, #end_date").datetimepicker({
-					format: 'YYYY-MM-DD HH:mm'
-				});
+					format: 'YYYY-MM-DD HH:mm',
+					inline: false // inline 모드를 비활성화
+				})
 
 				// 이전 오늘 다음 버튼 조작
 				$('.btn-group button[data-calendar-nav]').each(function () {

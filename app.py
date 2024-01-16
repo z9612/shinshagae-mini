@@ -86,7 +86,6 @@ def calendar_events():
     conn = None
     cursor = None
     try:
-        
         conn = db_config.db_connection.get_db()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
 
