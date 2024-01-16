@@ -58,7 +58,7 @@ class EventDao:
     
     def update_event(self, event_id, title, memo, start_date, end_date, url, priority):
         cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
-        sql = "update book set title=%s, memo=%s, start_date=%s end_date=%s priority=%s where event_id=%s"
+        sql = "UPDATE event SET title=%s, memo=%s, start_date=%s, end_date=%s, url=%s, class=%s WHERE id=%s"
         result = cursor.execute(sql,(title, memo, start_date, end_date, url, priority,event_id))
 
         print(f"update_num :: {result}")

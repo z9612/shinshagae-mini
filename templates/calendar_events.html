@@ -41,10 +41,12 @@
 				<h4>일정 입력</h4>
 				<div id="event-details">
 					<form action="http://localhost:5000/insert_event" method="POST">
+						<input type="hidden" name="timezone" id="timezone" />
+
+
 						<p>일정명<input type="text" name="event_name" required /></p>
 						<p>메모 <input type="text" name="memo" /></p>
 						<!-- 수정된 부분: 시작 날짜에 datetimepicker 적용 -->
-						<!-- <p>시작 날짜 <input type="text" name="from_date" id="from_date" required></p> -->
 						<div class="row">
 							<div class='col-sm-12'>
 								<div class="form-group">
@@ -177,6 +179,9 @@
 					calendar.view();
 				});
 			}(jQuery));
+
+			document.getElementById('timezone').value = new Date().getTimezoneOffset();
+
 		</script>
 	</div>
 </body>

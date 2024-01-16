@@ -69,7 +69,7 @@ def update_event():
         priority = request.form['priority']
         print(f"------------결과값 {id}, {event_name}, {memo}, {from_date}, {end_date}, {url}, {priority} ------------")
 
-        event_dao.update_event(id, event_name, memo, from_date,end_date, url, priority)
+        event_dao.update_event(id, event_name, memo, from_date, end_date, url, priority)
 
         return redirect(url_for("home"))
     #delete
