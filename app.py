@@ -49,21 +49,37 @@ def insert_event():
 
     return redirect(url_for("home"))
 
-    
-@app.route('/update_event')
+#수정 겸 삭제   
+@app.route('/update_event' , methods=['POST'])
 def update_event():
+    action_type = request.form['submitType']
+
     #수정할 이벤트 번호, 내용 등 입력받기
-    event_dao.update_event(1)
+    
+    #update
+    if action_type == '수정':
+        print("수정 들어옴")
 
-    return redirect(url_for("home"))
+        id= request.form['id']
+        event_name = request.form['event_name']
+        memo = request.form['memo']
+        from_date = request.form['from_date']
+        end_date = request.form['end_date']
+        url = request.form['url']
+        priority = request.form['priority']
+        print(f"------------결과값 {id}, {event_name}, {memo}, {from_date}, {end_date}, {url}, {priority} ------------")
 
-@app.route('/delete_event')
-def delete_event():
-    #삭제할 이벤트 번호 입력받기
+        event_dao.update_event(id, event_name, memo, from_date,end_date, url, priority)
 
-    event_dao.delete_event(1)
+        return redirect(url_for("home"))
+    #delete
+    elif action_type == '삭제':
+        id= request.form['id']
+        event_dao.delete_event(id)
 
-    return redirect(url_for("home"))
+        return redirect(url_for("home"))
+    else:
+        return 'Invalid action type'
 
 @app.route('/calendar-events')
 def calendar_events():
