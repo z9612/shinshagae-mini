@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+
+</head>
+<body>
+    <h1>jQuery Example</h1>
+    <hr>
+
+    <h3>입력</h3>
+    <form>
+        dname <input type="text" id="dname"> 
+        loc <input type="text" name="" id="loc"> 
+        <input type="submit" id="regBtn" value="부서등록">
+    </form>
+
+    <script type=text/javascript>
+        $(function() {
+          $('#regBtn').bind('click', function() {
+
+            dname = $('#dname').val()
+            loc = $('#loc').val()
+            payload = {dname:dname, loc:loc}
+            payload_json= JSON.stringify(payload)
+
+            $.post($SCRIPT_ROOT + '/api/depts', payload_json, function(data) {
+                console.log('##############', data)
+                $('#calculate').click()
+            });
+          });
+        });
+      </script>
+
+    <hr>
+
+    
+    <h3>수정</h3>
+    <form>
+        deptno <input type="text" id="edit_deptno">  
+        dname <input type="text" id="edit_dname"> 
+        loc <input type="text" name="" id="edit_loc"> 
+        <input type="submit" id="editBtn" value="부서정보수정">
+    </form>
+
+
+
+    <script type=text/javascript>
+        function edit_form_set(deptno, dname, loc){
+            $(function() {
+                $('#edit_deptno').val(deptno)
+                $('#edit_dname').val(dname)
+                $('#edit_loc').val(loc)
+            });
+        }
+
+        $(function() {
+          $('#editBtn').bind('click', function() {
+
+            deptno = $('#edit_deptno').val()
+            dname = $('#edit_dname').val()
+            loc = $('#edit_loc').val()
+            payload = {dname:dname, loc:loc}
+            payload_json= JSON.stringify(payload)
+
+            $.ajax({
+                    url:'/api/depts/'+deptno,
+                    type:'put',                    
+                    data:payload_json,
+                    contentType:'application/json;charset=UTF-8',
+                    success:function(data){
+                                if(data){
+                                    alert('수정 완료')
+                                    $('#calculate').click()
+                                }
+                        }            
+
+                });  
+          });
+        });
+      </script>
+
+    <hr>
+
+    <script type=text/javascript>
+        $(function() {
+          $('a#calculate').bind('click', function() {
+            $.getJSON($SCRIPT_ROOT + '/api/depts', function(data) {
+                console.log(data)    
+                result_html = ''      
+                $('#result').html(result_html)  
+                data.forEach(function(e, i) {
+                    console.log(e)
+                    html_str = '<h3>' + e.deptno +' '+ e.dname + ' ' + e.loc 
+                    html_str += ' <a href="javascript:edit_form_set('+ e.deptno +',\''+ e.dname + '\',\'' + e.loc +'\')">수정</a>'
+                    html_str += '</h3>\n'
+                    
+                    result_html += html_str
+                });
+                $('#result').append(result_html)
+            });
+          });
+        });
+      </script>
+      <a href="#" id="calculate" >클릭(부서 정보 가져오기)</a>    
+      <div id="result">?</div>
+</body>
+</html>
