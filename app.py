@@ -2,8 +2,9 @@ import pymysql
 import db_config 
 from flask import *
 from flask_cors import CORS
-
-
+from board import board_bp
+from userlogin import user_bp
+from chat_main import chat_bp
 
 app = Flask(__name__)
 
@@ -12,6 +13,10 @@ CORS(app)
 db_config.db_connection.get_db()
 event_dao = db_config.EventDao()
 
+# app.register_blueprint(board_bp)
+app.register_blueprint(user_bp)
+app.register_blueprint(chat_bp)
+app.register_blueprint(board_bp)
 @app.route('/')
 def home():
     return render_template('calendar_events.html')

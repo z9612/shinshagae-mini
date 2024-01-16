@@ -1,13 +1,14 @@
 from flask import *
 import dbconnect as d
 
-app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return "Hello, World!"
+user_bp = Blueprint('user',__name__)
 
-@app.route("/signup" ,methods=['POST','GET'])
+# @user_bp.route("/")
+# def index():
+#     return "Hello, World!"
+
+@user_bp.route("/signup" ,methods=['POST','GET'])
 def signup():
     if request.method=='GET':
         return render_template('sign_up.html')
@@ -20,7 +21,7 @@ def signup():
         #db에 유저정보 저장 (회원가입완료)#######db에 저장되면서, 문구도뜨면서, 다시로그인하는화면으로 가게해야함
         return str(d.insertUser(userid,email,userpasswd,username,iddate))
     
-@app.route('/login', methods=['POST','GET'])
+@user_bp.route('/login', methods=['POST','GET'])
 def login():
     if request.method=='GET':
         return render_template('login.html')
@@ -44,7 +45,7 @@ def login():
         
 # --------------------------------------------
 
-@app.route('/mypage', methods=['POST','GET'])
+@user_bp.route('/mypage', methods=['POST','GET'])
 def mypage():
     if request.method == 'GET': #걍 들어왔을때
         return render_template('mypage.html') # mypage에서 한번 더 아이디와 로그인확인!!
@@ -60,7 +61,7 @@ def mypage():
                 return '<script>alert("아이디와 비번 확인해주세요!!")</script>'
           
             else: #유저일때
-                return redirect(url_for('update'))
+                return redirect(url_for('user.update'))
             
             
         #탈퇴하기 눌렀을때(#####)
@@ -72,7 +73,7 @@ def mypage():
                 return redirect(url_for('delete'))
 
 
-@app.route('/update', methods=['POST','GET'])
+@user_bp.route('/update', methods=['POST','GET'])
 def update():
     if request.method=='GET': #걍 들어왔을때
         return render_template('update.html') # 수정필요 ===============================
@@ -88,7 +89,7 @@ def update():
         return str(d.updateUser(userid,email,userpasswd,username))
 
 
-@app.route('/delete', methods=['POST','GET'])
+@user_bp.route('/delete', methods=['POST','GET'])
 def delete():
     if request.method == 'GET': #걍 들어왔을때
         return render_template('delete.html')
@@ -102,7 +103,7 @@ def delete():
 
 
 if __name__=='__main__':
-    app.run(debug=True)
+    user_bp.run(debug=True)
 
 
 
