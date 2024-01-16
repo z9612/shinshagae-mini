@@ -1,0 +1,38 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>채팅방 {{result1[1]}}에 오신걸 환영합니다 .{{result1[2]}}님</title>
+    <H1><center>채팅방 {{result1[1]}}</center> </H1> 
+</head>
+<body>
+    <H2>채팅내역</H2>
+    <table class="table table-hover table-striped text-center" style=" width: 50%; border: 1px  solid #111114;">
+
+    {% for i in range(3,result1[0]+2,2) %}
+		
+            <tr>
+
+
+
+                <td>{{ result1[i]}}:  {{result1[i+1]}}</td>
+
+
+			</tr>
+	{% endfor %}
+    </table>
+    <br><br>
+    <form action="http://localhost:5000/chatroom/chatting" method="post">
+        <a>채팅방</a>  <input name ='chatid' value="{{result1[1]}}">
+        <a>유저</a>  <input name ='userid' value="{{result1[2]}}">
+        <input id="text" size="60" placeholder="메시지를 입력하세요!" name ='text'>
+        <tr><input type="submit"  value="채팅입력" /></tr>
+    </form>
+    <br>
+    <a href="http://localhost:5000/chatroom" onclick="leave_room();">채팅방 나가기</a>
+    <a href="http://localhost:5000/" onclick="leave_room();">초기화면으로</a>
+
+
+</body>
+</html>

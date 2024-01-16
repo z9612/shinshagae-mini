@@ -1,0 +1,22 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>채팅방{{ result1[0] }}</title>
+    <H1> 채팅방{{result1[0]}}에 오신걸 환영합니다</H1> 
+</head>
+<body>
+
+    <form action="http://localhost:5000/chatroom/chatting" method="post">
+        <a>채팅방</a>  <input name ='chatid' value="{{result1[0]}}">
+        <a>유저</a>  <input name ='userid' value="{{result1[1]}}">
+        <input id="text" size="80" placeholder="메시지를 입력하세요!" name ='text'>
+        <tr><input type="submit"  value="메세지입력하여 채팅진행하기" /></tr>
+    </form>
+    <br>
+    <a href="http://localhost:5000/chatroom" onclick="leave_room();">채팅방 나가기</a>
+    <a href="http://localhost:5000/" onclick="leave_room();">초기화면으로</a>
+
+</body>
+</html>
