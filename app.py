@@ -3,6 +3,8 @@ import db_config
 from flask import *
 from flask_cors import CORS
 
+
+
 app = Flask(__name__)
 
 CORS(app)
@@ -18,13 +20,6 @@ def home():
 def datapicker():
     return render_template('datepicker.html')
 
-# #한 이벤트 상세보기
-# @app.route('/calendar_events.html/<event_id>')
-# def select_one(event_id):
-#     result = event_dao.select_one(event_id)
-#     print("result :: " , result)
-#     return render_template('result_data.html', result=result)
-
 #한 이벤트 상세보기
 @app.route('/calendar_events.html/<event_id>')
 def select_one(event_id):
@@ -34,8 +29,6 @@ def select_one(event_id):
 
 @app.route('/insert_event', methods=['POST'])
 def insert_event():
-    #시작 날짜/종료 일자 검증 로직 필요
-
     #실제 db에 insert 하기
     event_name = request.form['event_name']
     memo = request.form['memo']
@@ -44,10 +37,18 @@ def insert_event():
     url = request.form['url']
     priority = request.form['priority']
 
-    print(f"------------결과값 {event_name}, {memo}, {from_date} {end_date} {url} {priority} ------------")
-    event_dao.insert_event(event_name, memo, from_date,end_date, url, priority)
+    # 시작 일자와 끝 일자 비교
+    if from_date > end_date:
+        return render_template('alert.html')
+    elif end_date < from_date :
+        return render_template('alert.html')
+    else:
+        print(f"------------결과값 {event_name}, {memo}, {from_date} {end_date} {url} {priority} ------------")
+        event_dao.insert_event(event_name, memo, from_date,end_date, url, priority)
 
-    return redirect(url_for("home"))
+        return redirect(url_for("home"))
+    
+    
 
 #수정 겸 삭제   
 @app.route('/update_event' , methods=['POST'])
@@ -67,11 +68,16 @@ def update_event():
         end_date = request.form['end_date']
         url = request.form['url']
         priority = request.form['priority']
-        print(f"------------결과값 {id}, {event_name}, {memo}, {from_date}, {end_date}, {url}, {priority} ------------")
 
-        event_dao.update_event(id, event_name, memo, from_date, end_date, url, priority)
-
-        return redirect(url_for("home"))
+        # 시작 일자와 끝 일자 비교
+        if from_date > end_date:
+            return render_template('alert.html')
+        elif end_date < from_date :
+            return render_template('alert.html')
+        else :
+            print(f"------------결과값 {id}, {event_name}, {memo}, {from_date}, {end_date}, {url}, {priority} ------------")
+            event_dao.update_event(id, event_name, memo, from_date, end_date, url, priority)
+            return redirect(url_for("home"))
     #delete
     elif action_type == '삭제':
         id= request.form['id']

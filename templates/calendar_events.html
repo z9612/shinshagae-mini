@@ -38,12 +38,9 @@
 			</div>
 			<!-- 일정 입력 칸 -->
 			<div class="span2">
-				<h4>일정 입력</h4>
+				<h4>등록할 일정을 입력해주세요</h4>
 				<div id="event-details">
 					<form action="http://localhost:5000/insert_event" method="POST">
-						<input type="hidden" name="timezone" id="timezone" />
-
-
 						<p>일정명<input type="text" name="event_name" required /></p>
 						<p>메모 <input type="text" name="memo" /></p>
 						<!-- 수정된 부분: 시작 날짜에 datetimepicker 적용 -->
@@ -74,9 +71,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- </div> -->
-
-
 						<p>url <input type="text" name="url" id="url"> </p>
 						<label for="priority">중요도</label>
 						<select id="priority" name="priority">
@@ -84,7 +78,8 @@
 							<option value="중간">중간</option>
 							<option value="낮음">낮음</option>
 						</select>
-						<input type="submit" name="submitType" value="입력" />
+						<p> </p>
+						<input type="submit" name="submitType" value="등록" />
 					</form>
 				</div>
 			</div>
