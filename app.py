@@ -16,9 +16,11 @@ event_dao = db_config.EventDao()
 def home():
     return render_template('calendar_events.html')
 
-@app.route('/datepicker')
-def datapicker():
-    return render_template('datepicker.html')
+#자신의 이벤트 전
+@app.route('/calendar-events')
+def calendar_events():
+    resp = event_dao.select_all()
+    return resp
 
 #한 이벤트 상세보기
 @app.route('/calendar_events.html/<event_id>')
@@ -34,7 +36,6 @@ def insert_event():
     memo = request.form['memo']
     from_date = request.form['from_date']
     end_date = request.form['end_date']
-    url = request.form['url']
     priority = request.form['priority']
 
     # 시작 일자와 끝 일자 비교
@@ -43,8 +44,8 @@ def insert_event():
     elif end_date < from_date :
         return render_template('alert.html')
     else:
-        print(f"------------결과값 {event_name}, {memo}, {from_date} {end_date} {url} {priority} ------------")
-        event_dao.insert_event(event_name, memo, from_date,end_date, url, priority)
+        print(f"------------결과값 {event_name}, {memo}, {from_date}, {end_date} , {priority} ------------")
+        event_dao.insert_event(event_name, memo, from_date, end_date, priority)
 
         return redirect(url_for("home"))
     
@@ -66,7 +67,6 @@ def update_event():
         memo = request.form['memo']
         from_date = request.form['from_date']
         end_date = request.form['end_date']
-        url = request.form['url']
         priority = request.form['priority']
 
         # 시작 일자와 끝 일자 비교
@@ -75,8 +75,8 @@ def update_event():
         elif end_date < from_date :
             return render_template('alert.html')
         else :
-            print(f"------------결과값 {id}, {event_name}, {memo}, {from_date}, {end_date}, {url}, {priority} ------------")
-            event_dao.update_event(id, event_name, memo, from_date, end_date, url, priority)
+            print(f"------------결과값 {id}, {event_name}, {memo}, {from_date}, {end_date}, {priority} ------------")
+            event_dao.update_event(id, event_name, memo, from_date, end_date, priority)
             return redirect(url_for("home"))
     #delete
     elif action_type == '삭제':
@@ -87,26 +87,7 @@ def update_event():
     else:
         return 'Invalid action type'
 
-@app.route('/calendar-events')
-def calendar_events():
-    conn = None
-    cursor = None
-    try:
-        conn = db_config.db_connection.get_db()
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
 
-        ## 자기자신의 일정만 보이게하기 where문에 추가 필요
-        cursor.execute("SELECT id, title, url, class, UNIX_TIMESTAMP(start_date)*1000 as start, UNIX_TIMESTAMP(end_date)*1000 as end, memo FROM event") 
-        rows = cursor.fetchall()
-        resp = jsonify({'success' : 1, 'result' : rows})
-        resp.status_code = 200
-        print(resp)
-        return resp
-    except Exception as e:
-        print(e)
-    finally:
-        cursor.close() 
-        conn.close()
 
 if __name__ == "__main__":
     app.run(debug=True)
