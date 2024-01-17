@@ -2,9 +2,16 @@ import pymysql
 import db_config 
 from datetime import timedelta, datetime
 from flask import jsonify
+import logging
+from logging.config import fileConfig
 
-class db_connection : 
-    def get_db() :
+# 로깅 설정
+fileConfig('logging.conf', encoding='utf-8')
+logger = logging.getLogger(__name__)
+
+class db_connection: 
+    def get_db():
+        logger.info("getDB")
         project_db = pymysql.connect(
             user='giun',
             passwd='12345',
@@ -13,100 +20,116 @@ class db_connection :
             charset='utf8',
             autocommit=True
         )
-            
         return project_db
     
 class EventDao:
     def __init__(self):
-            pass
-    def select_all(self):  
+        pass
+
+    def select_all(self, userno):  
         conn = None
         cursor = None
-
         try:
-            conn = db_config.db_connection.get_db()
+            logger.info(f"select_all - userno: {userno}")
+            conn = db_connection.get_db()
             cursor = conn.cursor(pymysql.cursors.DictCursor)
-
-            ## 자기자신의 일정만 보이게하기 where문에 추가 필요
-            cursor.execute("SELECT id, title, class, UNIX_TIMESTAMP(start_date)*1000 as start, UNIX_TIMESTAMP(end_date)*1000 as end, memo FROM event") 
+            cursor.execute("SELECT id, title, class, UNIX_TIMESTAMP(start_date)*1000 as start, UNIX_TIMESTAMP(end_date)*1000 as end, memo FROM event where userno=%s", userno) 
             rows = cursor.fetchall()
-            resp = jsonify({'success' : 1, 'result' : rows})
+            resp = jsonify({'success': 1, 'result': rows})
             resp.status_code = 200
-            print(resp)
             return resp
         except Exception as e:
-            print(e)
+            logger.error(f"Error in select_all: {e}")
         finally:
-            cursor.close() 
-            conn.close()
+            if cursor:
+                cursor.close() 
+            if conn:
+                conn.close()
     
-    def select_one(self,event_id):
-        cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
-        print("받은 event_id ::: ", event_id)
-        sql = "SELECT * FROM event where id=%s;"
-        cursor.execute(sql,(event_id))
-        result = cursor.fetchone()
+    def select_one(self, event_id):
+        cursor = None
+        try:
+            logger.info(f"select_one - event_id: {event_id}")
+            cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
+            sql = "SELECT * FROM event where id=%s;"
+            cursor.execute(sql, (event_id))
+            result = cursor.fetchone()
+            return result
+        except Exception as e:
+            logger.error(f"Error in select_one: {e}")
+        finally:
+            if cursor:
+                cursor.close()
+            if db_connection.get_db():
+                db_connection.get_db().close()
         
-        db_connection.get_db().close()
-        return result
-        
-    def insert_event(self, title, memo, start_date, end_date, priority):
+    def insert_event(self, title, memo, start_date, end_date, priority, userno):
+        cursor = None
+        try:
+            logger.info(f"insert_event - title: {title}, userno: {userno}")
+            start_date = datetime.strptime(start_date, "%Y-%m-%d %H:%M")
+            end_date = datetime.strptime(end_date, "%Y-%m-%d %H:%M")
+            cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
 
-        start_date = datetime.strptime(start_date, "%Y-%m-%d %H:%M")
-        end_date = datetime.strptime(end_date, "%Y-%m-%d %H:%M")
+            match priority:
+                case '높음':
+                    priority = 'event-important'
+                case '중간':
+                    priority = 'event-info'
+                case '낮음':
+                    priority = ''
 
-        # #시간 차이가 30분 이내면 30분 추가
-        # if (end_date - start_date).total_seconds() < 30 * 60:
-        #     end_date += timedelta(minutes=30)
-        #     print("시간 적용완료 ::: " , end_date)
-
-        cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
-
-        print("priority ::: " , priority)
-        match priority :
-            case '높음' :
-                priority = 'event-important'
-            case '중간' :
-                priority = 'event-info'
-            case '낮음' :
-                priority = ''
-
-        sql = "insert into event(title, memo, start_date, end_date, class) values(%s, %s, %s, %s, %s)"
-
-        result = cursor.execute(sql,(title, memo, start_date, end_date, priority))
-
-        print(f"insert_num :: {result}")
-
-        db_connection.get_db().close()
-        return result
+            sql = "insert into event(title, memo, start_date, end_date, class, userno) values(%s, %s, %s, %s, %s, %s)"
+            result = cursor.execute(sql, (title, memo, start_date, end_date, priority, userno))
+            logger.info(f"insert_event - result: {result}")
+            return result
+        except Exception as e:
+            logger.error(f"Error in insert_event: {e}")
+        finally:
+            if cursor:
+                cursor.close()
+            if db_connection.get_db():
+                db_connection.get_db().close()
     
-    def update_event(self, event_id, title, memo, start_date, end_date, priority):
-        cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
-        
-        print("priority ::: " , priority)
-        match priority :
-            case '높음' :
-                priority = 'event-important'
-            case '중간' :
-                priority = 'event-info'
-            case '낮음' :
-                priority = ''
-        
-        sql = "UPDATE event SET title=%s, memo=%s, start_date=%s, end_date=%s, class=%s WHERE id=%s"
-        result = cursor.execute(sql,(title, memo, start_date, end_date, priority,event_id))
+    def update_event(self, event_id, title, memo, start_date, end_date, priority, userno):
+        cursor = None
+        try:
+            logger.info(f"update_event - event_id: {event_id}, userno: {userno}")
+            cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
 
-        print(f"update_num :: {result}")
+            match priority:
+                case '높음':
+                    priority = 'event-important'
+                case '중간':
+                    priority = 'event-info'
+                case '낮음':
+                    priority = ''
 
-        db_connection.get_db().close()
-        return result
-        
-    def delete_event(self, eventid):
-        cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
-        sql = "delete from event where id=%s"
-
-        result = cursor.execute(sql,(eventid))
-
-        print(f"delete_num :: {result}")
-
-        db_connection.get_db().close()
-        return result
+            sql = "UPDATE event SET title=%s, memo=%s, start_date=%s, end_date=%s, class=%s WHERE id=%s and userno=%s"
+            result = cursor.execute(sql, (title, memo, start_date, end_date, priority, event_id, userno))
+            logger.info(f"update_event - result: {result}")
+            return result
+        except Exception as e:
+            logger.error(f"Error in update_event: {e}")
+        finally:
+            if cursor:
+                cursor.close()
+            if db_connection.get_db():
+                db_connection.get_db().close()
+    
+    def delete_event(self, event_id, userno):
+        cursor = None
+        try:
+            logger.info(f"delete_event - event_id: {event_id}, userno: {userno}")
+            cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
+            sql = "delete from event where id=%s and userno=%s"
+            result = cursor.execute(sql, (event_id, userno))
+            logger.info(f"delete_event - result: {result}")
+            return result
+        except Exception as e:
+            logger.error(f"Error in delete_event: {e}")
+        finally:
+            if cursor:
+                cursor.close()
+            if db_connection.get_db():
+                db_connection.get_db().close()

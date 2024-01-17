@@ -1,9 +1,13 @@
 from flask import *
+from flask_cors import CORS
 import dbconnect as d
 
 
 user_bp = Blueprint('user',__name__)
 
+@user_bp.before_request
+def before_request():
+    g.userno = session.get('userno', None)
 # @user_bp.route("/")
 # def index():
 #     return "Hello, World!"
@@ -30,13 +34,19 @@ def login():
         userid=request.form['userid']
         userpasswd = request.form['userpasswd']
 
+        user = d.search_user(userid, userpasswd)
+
         #LOGIN 눌렀을때(로그인진행)
         if action_type == 'LOGIN':
             if d.search_user(userid,userpasswd)==None: # 유저아닐때
                 return f'<script>alert("아이디와 비번 확인해주세요!!. {userid}님")</script>'
           
             else: #유저일때
-                return f'<script>alert("반갑습니다.{userid}님")</script>'
+                session['login-info'] = user
+                # userno = session['login-info'].get('userno', None)
+                print("!!!!! >> " , session['login-info'].get('userno', None))
+                return redirect(url_for('home'))
+                # return f'<script>alert("반갑습니다.{userid}님")</script>'
                 ##### 위의 문구 뜬 다음, 캘린더페이지로 이동해야함
             
         #SIGNUP 눌렀을때(회원가입페이지로이동)
@@ -48,7 +58,7 @@ def login():
 @user_bp.route('/mypage', methods=['POST','GET'])
 def mypage():
     if request.method == 'GET': #걍 들어왔을때
-        return render_template('mypage.html') # mypage에서 한번 더 아이디와 로그인확인!!
+        return render_template('mypage.html',userno=g.userno) # mypage에서 한번 더 아이디와 로그인확인!!
     
     else: #회원정보수정, 탈퇴하기 누를때 여기임 
         action_type = request.form['submitType']

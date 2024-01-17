@@ -5,9 +5,17 @@ import msgdb
 
 chat_bp = Blueprint("chat",__name__)
 
-@chat_bp.route("/chatroom")
+@chat_bp.before_request
+def before_request():
+    g.userno = session.get('userno', None)
+
+@chat_bp.route("/chatroom", methods=['GET'])
 def index():
-   return render_template('chatroom.html')
+   print("도착했습니다")
+   share_list = [request.args.get('id'), request.args.get('title'), request.args.get('memo'), request.args.get('start_date'), request.args.get('end_date'), request.args.get('class') ]
+
+   
+   return render_template('chatroom.html',share_list=share_list)
 
 
 @chat_bp.route('/chatroom/chat',methods=['POST','GET'])

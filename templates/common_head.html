@@ -20,6 +20,12 @@
             <li><a href="/board">게시판</a></li>
             <li><a href="/chatroom">채팅방</a></li>
             <li><a href="/mypage">마이페이지</a></li>
+
+            {% if userno %}
+                <li><a href="/logout">로그아웃</a></li>
+            {% else %}
+                <li><a href="/login">로그인</a></li>
+            {% endif %}
         </ul>
     </div>
 </nav>
