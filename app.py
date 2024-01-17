@@ -9,7 +9,8 @@ import logging
 from logging.config import fileConfig
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = secrets.token_hex(24)
+#app.config['SECRET_KEY'] = secrets.token_hex(24)
+app.config['SECRET_KEY'] = 'AAAAAAAAAAAAAA'
 
 # 로깅 설정
 fileConfig('logging.conf', encoding='utf-8')

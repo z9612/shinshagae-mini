@@ -23,7 +23,9 @@
 
             {% if session['login_info'] %}
                 <li><a href="/logout">로그아웃</a></li>
-                <li><p>반갑습니다 {{session['login_info'].get('userid')}}님!</p></li>
+                <li class="ml-auto"> <!-- 여기서 navbar-right를 추가 -->
+                    <p class="navbar-text">반갑습니다 {{session['login_info'].get('userid')}}님!</p>
+                </li>
             {% else %}
                 <li><a href="/login">로그인</a></li>
             {% endif %}

@@ -18,18 +18,18 @@ def showmessage(chatid):
     result=[]
     con=db_conn()
     cursor=con.cursor(pymysql.cursors.DictCursor)
-    sql_select='select chatid,userid,text from project.chatting where chatid=%s '
+    sql_select='select chatid,userno,text from project.chatting where chatid=%s '
     cursor.execute(sql_select,chatid)
     result=cursor.fetchall()
     cursor.close()
     con.close()
     return result
 
-def sendmessage(chatid,userid,text):
+def sendmessage(chatid,userno,text):
     con =db_conn()
     cursor=con.cursor()
-    sql_insert='insert into project.chatting (text,chatid,userid)  values(%s,%s,%s);'
-    result_num=cursor.execute(sql_insert,(text,chatid,userid))
+    sql_insert='insert into project.chatting (text,chatid,userno)  values(%s,%s,%s);'
+    result_num=cursor.execute(sql_insert,(text,chatid,userno))
     cursor.close()
     con.close()
     return result_num

@@ -2,37 +2,75 @@ from flask import *
 import chatdb 
 import msgdb
 
+app =Flask(__name__)
 
-chat_bp = Blueprint("chat",__name__)
+chat_bp = Blueprint("chat", __name__)
 
-@chat_bp.before_request
-def before_request():
-    g.userno = session.get('userno', None)
-
-@chat_bp.route("/chatroom", methods=['GET'])
+@chat_bp.route("/chatroom")
 def index():
-   print("도착했습니다")
-   share_list = [request.args.get('id'), request.args.get('title'), request.args.get('memo'), request.args.get('start_date'), request.args.get('end_date'), request.args.get('class') ]
+   return render_template('chatroom.html')
 
-   
-   return render_template('chatroom.html',share_list=share_list)
+@chat_bp.route('/chatroom/share',methods=['POST','GET'])
+def share():
+    chatid=request.form["chatid"]
+    userno=request.form["userno"]
+    shr_event=chatdb.ShowShareDate(chatid)
+    print(shr_event)
+    result1=shr_event
+    result2=[]
+    list_len=len(shr_event)
+    result2.append(list_len)
+    result2.append(chatid)
+    result2.append(userno)
+    for i in range(len(result1)):
+        
+        result2.append(result1[i]['userno'])
+        result2.append(result1[i]['event'])
+    
+    return render_template('showshare.html',result1=result2)
 
+@chat_bp.route('/chatroom/dateroom',methods=['POST','GET'])
+def dateroom():
+    userno=request.form["userno"]
+    chatid=request.form["chatid"]
+    event=request.form["event"]
+    shr_event=chatdb.ShareDate(userno,chatid,event)
+    return render_template('dateroom.html')
 
+@chat_bp.route('/chatroom/date',methods=['POST','GET'])
+def date():
+    userno=request.form["userno"]
+    chatid=request.form["chatid"]
+    event=request.form["event"]
+    shr_event2=chatdb.SShareDate(userno,event)
+    return render_template('date.html')
 
 @chat_bp.route('/chatroom/chat',methods=['POST','GET'])
 def chat():
     if request.method=='POST':
+            
+            userno=request.form["userno"]
             chatid=request.form["chatid"]
-            userid=request.form["userid"]
-            print('###userid###')
-            print(userid)
+        
             if chatid:
                 is_chat=chatdb.SearchChatRoom(chatid)
+                
+                is_date=chatdb.ShowDate(userno)
+                
+                
+                #  for i in range(len(is_date)):
+                  #  print(is_date[i]['title'])
+                
                 if is_chat:     
                     result1=[]
+                    list_len=len(is_date)
+                  #  print('약속 수 = list_len')
                     result1.append(chatid) #
-                    result1.append(userid) #
-                    print(result1)                             
+                    result1.append(userno) #
+                    result1.append(list_len)
+                    for i in range(len(is_date)):
+                        result1.append(is_date[i]['title'])
+                 #   print(result1)                             
                     return render_template("chat.html",result1=result1) 
                 
                 else:    
@@ -40,7 +78,7 @@ def chat():
                     result1=list(chatid)
                     result1=[]
                     result1.append(chatid) 
-                    result1.append(userid) 
+                    result1.append(userno) 
                     
                     return render_template("newchat.html",result1=result1) 
             else:
@@ -54,21 +92,21 @@ def chat():
 def chatting():
     text=request.form['text']
     chatid=request.form['chatid']
-    userid=request.form['userid']
-    send_msg=msgdb.sendmessage(chatid,userid,text)
+    userno=request.form['userno']
+    send_msg=msgdb.sendmessage(chatid,userno,text)
     show_msg=msgdb.showmessage(chatid)
     result1=show_msg
-    result2=[] # chatid ,userid 먼저 저장하고 채팅 로그 저장하는 리스트 
+    result2=[] # chatid ,userno 먼저 저장하고 채팅 로그 저장하는 리스트 
     for i in range(len(result1)):
          if i== 0 : 
              result2.append(result1[i]['chatid']) 
     
          else :break
-    result2.append(userid)       
+    result2.append(userno)       
 
 
     for i in range(len(result1)):
-            result2.append(result1[i]['userid'])
+            result2.append(result1[i]['userno'])
             result2.append(result1[i]['text'])
     list_len=len(result2)-2
     result2.insert(0,list_len)  
@@ -76,11 +114,7 @@ def chatting():
 
        
     return render_template("chatting.html",result1=result2) 
-        
-
-
-   
 
 
 if(__name__=='__main__'):
-   chat_bp.run(debug=True)
+   app.run(debug=True)

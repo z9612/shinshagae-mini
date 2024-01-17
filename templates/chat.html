@@ -4,18 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>채팅방{{ result1[0] }}</title>
-    {% include 'common_head.html' %}
     <H1> 채팅방{{result1[0]}}에 오신걸 환영합니다</H1> 
 </head>
 <body>
 
     <form action="http://localhost:5000/chatroom/chatting" method="post">
-        <a>채팅방</a>  <input name ='chatid' value="{{result1[0]}}">
-        <a>유저</a>  <input name ='userid' value="{{result1[1]}}">
+        <p>유저 :: {{session['login_info'].userid}} </p>  
+        <p>채팅방 :: <input name ='chatid' value="{{result1[0]}}"></p>  
+        <input type="hidden" name ='userno' value="{{session['login_info'].userno}}">
         <input id="text" size="80" placeholder="메시지를 입력하세요!" name ='text'>
         <tr><input type="submit"  value="메세지입력하여 채팅진행하기" /></tr>
     </form>
+    
     <br>
+
+        <h4>{{session['login_info'].userid}} 의 일정</h4>
+        {% for i in range(3,3+result1[2]) %}
+            
+        <tr>
+
+
+            <form action="http://localhost:5000/chatroom/dateroom" method="post">
+                <input type="hidden" name='chatid' value="{{result1[0]}}"> <input type="hidden"name ='userno' value="{{result1[1]}}">{{result1[i]}}<input type="hidden"name ='event' value="{{result1[i]}}">
+                <tr><input type="submit"  value="일정공유하기" /></tr>
+            </form>
+        
+        </tr>
+        <br>
+        {% endfor %}
+
+    <form action="http://localhost:5000/chatroom/share" method="post">
+        채팅방<input  name='chatid' value="{{result1[0]}}">
+        <input type="hidden"name ='userno' value="{{session['login_info'].userno}}">
+        <input type="submit"  value="채팅방일정보기" />
+    </form>
+   
+    
     <a href="http://localhost:5000/chatroom" onclick="leave_room();">채팅방 나가기</a>
     <a href="http://localhost:5000/" onclick="leave_room();">초기화면으로</a>
 
