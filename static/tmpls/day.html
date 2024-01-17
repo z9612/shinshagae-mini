@@ -3,7 +3,7 @@
 <div id="cal-day-box">
 	<div class="row-fluid clearfix cal-row-head">
 		<div class="span1 col-xs-1 cal-cell">
-			<%= cal.locale.time %>
+			<%= cal.locale.time %> 
 		</div>
 		<div class="span11 col-xs-11 cal-cell">
 			<%= cal.locale.events %>
@@ -61,7 +61,7 @@
 
 						<% _.each(by_hour, function(event){ %>
 							<div class="pull-left day-event day-highlight dh-<%= event['class'] %>"
-								style="margin-top: <%= (event.top * 30) %>px; height: <%= (event.lines * 30) %>px">
+								style="margin-top: <%= (event.top * 30) %>px; height: <%= Math.max(event.lines * 30, 1) %>px">
 								<span class="cal-hours">
 									<%= event.start_hour %> - <%= event.end_hour %>
 								</span>

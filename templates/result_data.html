@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>일정 상세 정보</title>
-	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
-	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}" />
-	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/calendar.min.css') }}" />
-	<!-- Add jQuery UI CSS -->
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- Bootstrap DateTimePicker CSS -->
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
-
+    {% include 'common_head.html' %} 
 </head>
+
 <body>
     <h4><a href="/">일정 관리</a></h4>
     <p><strong>일정 상세 정보</strong></p>
 
-    <form action="http://localhost:5000/update_event" method="POST"></form>
+    <form action="http://localhost:5000/update_event" method="POST" id="updateForm">
     <table>
         <tr>
             <th>이벤트 번호</th>
-            <td><input type="text" value="{{ result['id'] }}" readonly></td>
+            <td><input type="text" value="{{ result['id'] }}" name="id" required readonly></td>
         </tr>
         <tr>
             <th>일정명</th>
-            <td><input type="text" value="{{ result['title'] }}"></td>
+            <td><input type="text" name="event_name" value="{{ result['title'] }}" required></td>
         </tr>
         <tr>
             <th>메모</th>
-            <td><input type="text" value="{{ result['memo'] }}"></td>
+            <td><input type="text" value="{{ result['memo'] }}" name="memo" ></td>
         </tr>
         <tr>
             <th>시작 날짜</th>
@@ -59,31 +49,29 @@
             </td>
         </tr>
         <tr>
-            <th>url</th>
-            <td><input type="text" value="{{ result['url'] }}"></td>
-        </tr>
         <tr>
-            <tr>
-                <th>중요도</th>
-                <td>
-                    <select id="priority" name="priority">
-                        <option value="높음" {% if result['class'] == 'event-important' %}selected{% endif %}>높음</option>
-                        <option value="중간" {% if result['class'] == 'event-info' %}selected{% endif %}>중간</option>
-                        <option value="낮음" {% if result['class'] == '' %}selected{% endif %}>낮음</option>
-                    </select>
-                </td>
-            </tr>
-            
+            <th>중요도</th>
+            <td>
+                <select id="priority" name="priority">
+                    <option value="높음" {% if result['class']=='event-important' %}selected{% endif %}>높음</option>
+                    <option value="중간" {% if result['class']=='event-info' %}selected{% endif %}>중간</option>
+                    <option value="낮음" {% if result['class']=='' %}selected{% endif %}>낮음</option>
+                </select>
+            </td>
+        </tr>
+
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" name="submitType" value="수정" />
-                <input type="submit" name="submitType" value="삭제" />
+                <input type="submit" name="submitType" value="수정" onclick="confirmAction(event,'수정')" />
+                <input type="submit" name="submitType" value="삭제" onclick="confirmAction(event,'삭제')"/>
             </td>
         </tr>
     </table>
-    </table>
-</form>
+    </form>
+
+    <!-- Add jQuery UI and Timepicker scripts -->
+    {% include 'common_script.html' %}
 
     <script>
         $(document).ready(function () {
@@ -91,6 +79,20 @@
                 format: 'YYYY-MM-DD HH:mm'
             });
         });
+    
+        function confirmAction(event, actionType) {
+            // confirm 함수는 사용자에게 확인 창을 띄우고 OK 또는 취소 버튼을 클릭하도록 합니다.
+            var confirmationMessage = (actionType === '수정') ? "정말 수정하시겠습니까?" : "정말 삭제하시겠습니까?";
+
+            var confirmResult = confirm(confirmationMessage);
+            
+            if (!confirmResult) {
+                event.preventDefault(); // 이벤트 취소
+            } else {
+                document.getElementById("updateForm").submit();
+            }
+        }
     </script>
 </body>
+
 </html>
