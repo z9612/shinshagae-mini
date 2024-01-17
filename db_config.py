@@ -1,5 +1,4 @@
 import pymysql
-import db_config 
 from datetime import timedelta, datetime
 from flask import jsonify
 import logging

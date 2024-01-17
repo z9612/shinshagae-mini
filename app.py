@@ -9,7 +9,7 @@ import logging
 from logging.config import fileConfig
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = app.config['SECRET_KEY'] = secrets.token_hex(24)
+app.config['SECRET_KEY'] = secrets.token_hex(24)
 
 # 로깅 설정
 fileConfig('logging.conf', encoding='utf-8')
@@ -20,15 +20,28 @@ CORS(app)
 db_config.db_connection.get_db()
 event_dao = db_config.EventDao()
 
-# app.register_blueprint(board_bp)
+app.register_blueprint(board_bp)
 app.register_blueprint(user_bp)
 app.register_blueprint(chat_bp)
-app.register_blueprint(board_bp)
+
 @app.route('/')
 def home():
-    logger.info("Home route accessed")
-    logger.info(f"userno :::{session['login_info'].get('userno', None)} ")
-    return render_template('calendar_events.html', userno=session['login_info'].get('userno', None))
+    #로그인 안한 상태면 로그인 페이지로
+    if 'login_info' not in session:
+        logger.info("로그인 필요")
+        return redirect(url_for("user.login"))
+    
+    #로그인 이미 한 상태면 
+    else:
+        if 'login_info' in session:
+            logger.info("Home route accessed")
+            logger.info(f"userno :::{session['login_info'].get('userno', None)} ")
+            return render_template('calendar_events.html')
+        else:
+            # 세션에 login_info가 없을 경우의 처리
+            return redirect(url_for("user.login"))
+        
+
 
 # 자신의 이벤트 전체 보기
 @app.route('/calendar-events')

@@ -19,10 +19,11 @@
         <ul class="nav navbar-nav">
             <li><a href="/board">게시판</a></li>
             <li><a href="/chatroom">채팅방</a></li>
-            <li><a href="/user.mypage2">마이페이지</a></li>
+            <li><a href="{{url_for('user.mypage2')}}">마이페이지</a></li>
 
-            {% if userno %}
+            {% if session['login_info'] %}
                 <li><a href="/logout">로그아웃</a></li>
+                <li><p>반갑습니다 {{session['login_info'].get('userid')}}님!</p></li>
             {% else %}
                 <li><a href="/login">로그인</a></li>
             {% endif %}
