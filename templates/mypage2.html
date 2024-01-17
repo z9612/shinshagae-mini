@@ -1,0 +1,26 @@
+<html>
+<head>
+<body>
+    <div class="container">
+        <h1>마이페이지</h1>
+        <!--  <h1>{{session['login_info']}}</h1> -->
+
+
+        {% for key,value in session['login_info'].items(): %}
+            {{key}} :
+            {{value}}
+            <br>
+            
+        {% endfor %}
+        <form action="http://localhost:5000/mypage2" method="post">
+            
+            <br>
+            <input type="submit" name="submitType" value="회원정보수정">
+            <input type="submit" name="submitType" value="탈퇴하기">
+        </form>
+    </div>
+</body>
+</head>
+</html>
+
+

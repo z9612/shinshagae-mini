@@ -20,21 +20,21 @@ CORS(app)
 db_config.db_connection.get_db()
 event_dao = db_config.EventDao()
 
-app.register_blueprint(board_bp)
+# app.register_blueprint(board_bp)
 app.register_blueprint(user_bp)
 app.register_blueprint(chat_bp)
-
+app.register_blueprint(board_bp)
 @app.route('/')
 def home():
     logger.info("Home route accessed")
-    logger.info(f"userno :::{session['login-info'].get('userno', None)} ")
-    return render_template('calendar_events.html', userno=session['login-info'].get('userno', None))
+    logger.info(f"userno :::{session['login_info'].get('userno', None)} ")
+    return render_template('calendar_events.html', userno=session['login_info'].get('userno', None))
 
 # 자신의 이벤트 전체 보기
 @app.route('/calendar-events')
 def calendar_events():
     logger.info("Calendar events route accessed")
-    resp = event_dao.select_all(session['login-info'].get('userno', None))
+    resp = event_dao.select_all(session['login_info'].get('userno', None))
     return resp
 
 # 한 이벤트 상세보기
@@ -43,16 +43,19 @@ def select_one(event_id):
     logger.info(f"Select one route accessed - event_id: {event_id}")
     result = event_dao.select_one(event_id)
     logger.info("Result :: " , result)
-    return render_template('result_data.html', result=result, userno=session['login-info'].get('userno', None))
+    return render_template('result_data.html', result=result, userno=session['login_info'].get('userno', None))
 
 @app.route('/insert_event', methods=['POST'])
 def insert_event():
-    userno = session['login-info'].get('userno', None)
+    #실제 db에 insert 하기
+
+    #userno = userno
     event_name = request.form['event_name']
     memo = request.form['memo']
     from_date = request.form['from_date']
     end_date = request.form['end_date']
     priority = request.form['priority']
+    userno = session['login_info'].get('userno', None)
 
     # 시작 일자와 끝 일자 비교
     if from_date > end_date:
@@ -80,7 +83,7 @@ def update_event():
         from_date = request.form['from_date']
         end_date = request.form['end_date']
         priority = request.form['priority']
-        userno = session['login-info'].get('userno', None)
+        userno = session['login_info'].get('userno', None)
 
         # 시작 일자와 끝 일자 비교
         if from_date > end_date:
@@ -96,8 +99,8 @@ def update_event():
     # delete
     elif action_type == '삭제':
         id = request.form['id']
-        logger.info(f"Delete event - id: {id}, userno: {session['login-info'].get('userno', None)}")
-        event_dao.delete_event(id, session['login-info'].get('userno', None))
+        logger.info(f"Delete event - id: {id}, userno: {session['login_info'].get('userno', None)}")
+        event_dao.delete_event(id, session['login_info'].get('userno', None))
         return redirect(url_for("home"))
     else:
         logger.warning("Invalid action type")

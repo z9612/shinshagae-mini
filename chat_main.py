@@ -18,6 +18,7 @@ def index():
    return render_template('chatroom.html',share_list=share_list)
 
 
+
 @chat_bp.route('/chatroom/chat',methods=['POST','GET'])
 def chat():
     if request.method=='POST':

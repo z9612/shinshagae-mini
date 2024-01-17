@@ -2066,3 +2066,114 @@
 2024-01-17 11:13:46,273 - werkzeug - INFO -  * Restarting with stat
 2024-01-17 11:13:46,749 - werkzeug - WARNING -  * Debugger is active!
 2024-01-17 11:13:46,757 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:16:11,794 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\dbconnect.py', reloading
+2024-01-17 11:16:11,846 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:55:22,970 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-17 11:55:22,971 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-01-17 11:55:22,976 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:55:23,428 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:55:23,435 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:55:25,218 - __main__ - INFO - Home route accessed
+2024-01-17 11:55:25,230 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-01-17 11:55:25,302 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:25] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-01-17 11:55:25,302 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:25] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-01-17 11:55:25,416 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:25] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:55:30,787 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:30] "GET /login HTTP/1.1" 200 -
+2024-01-17 11:55:37,467 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:37] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-01-17 11:55:37,504 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:37] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-01-17 11:55:37,688 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:37] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-01-17 11:55:38,039 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:38] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-01-17 11:55:38,291 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:55:38] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:55:47,619 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 11:55:47,668 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:55:48,102 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:55:48,121 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:55:59,204 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 11:55:59,253 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:55:59,935 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:55:59,946 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:56:21,093 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 11:56:21,141 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:56:21,583 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:56:21,599 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:56:23,720 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:56:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-17 11:56:23,742 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:56:23] "GET /mypage2 HTTP/1.1" 200 -
+2024-01-17 11:56:27,651 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 11:56:27,702 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:56:28,177 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:56:28,187 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:56:31,212 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:56:31] "GET /login HTTP/1.1" 200 -
+2024-01-17 11:56:40,652 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:56:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-17 11:56:40,912 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:56:40] "GET /mypage2 HTTP/1.1" 200 -
+2024-01-17 11:57:00,427 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 11:57:00,506 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:57:00,982 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:57:00,982 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:57:01,868 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:01] "[35m[1mGET /mypage2 HTTP/1.1[0m" 500 -
+2024-01-17 11:57:01,915 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:01] "GET /mypage2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-01-17 11:57:02,093 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:02] "GET /mypage2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-01-17 11:57:02,433 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:02] "GET /mypage2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-01-17 11:57:02,688 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:02] "[36mGET /mypage2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:57:06,264 - __main__ - INFO - Home route accessed
+2024-01-17 11:57:06,270 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-01-17 11:57:06,561 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:06] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-01-17 11:57:06,609 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:06] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-01-17 11:57:06,928 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:06] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:57:07,195 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:07] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:57:08,126 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:08] "GET /login HTTP/1.1" 200 -
+2024-01-17 11:57:22,127 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 11:57:22,182 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:57:22,649 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:57:22,655 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:57:23,821 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:23] "GET /login HTTP/1.1" 200 -
+2024-01-17 11:57:26,080 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-17 11:57:26,097 - __main__ - INFO - Home route accessed
+2024-01-17 11:57:26,107 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:26] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-01-17 11:57:26,462 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:26] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-01-17 11:57:26,483 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:26] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-01-17 11:57:26,714 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:57:26] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:57:44,807 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\app.py', reloading
+2024-01-17 11:57:44,851 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:57:45,289 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:57:45,295 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:57:47,326 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\app.py', reloading
+2024-01-17 11:57:47,370 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:57:47,787 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:57:47,794 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:58:10,939 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\app.py', reloading
+2024-01-17 11:58:10,977 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:58:11,453 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:58:11,460 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:58:12,428 - __main__ - INFO - Home route accessed
+2024-01-17 11:58:12,429 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-01-17 11:58:12,478 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:12] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-01-17 11:58:12,664 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:12] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-01-17 11:58:12,995 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:12] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:58:13,245 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-01-17 11:58:14,009 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:14] "GET /login HTTP/1.1" 200 -
+2024-01-17 11:58:18,053 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-17 11:58:18,067 - __main__ - INFO - Home route accessed
+2024-01-17 11:58:18,068 - __main__ - INFO - userno :::6 
+2024-01-17 11:58:18,069 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:18] "GET / HTTP/1.1" 200 -
+2024-01-17 11:58:18,283 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:18] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-17 11:58:18,432 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:18] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-17 11:58:18,432 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:18] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-17 11:58:18,432 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:18] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-17 11:58:18,799 - __main__ - INFO - Calendar events route accessed
+2024-01-17 11:58:18,825 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:18] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-17 11:58:19,066 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:19] "GET /static/tmpls/month.html?_=1705460298449 HTTP/1.1" 200 -
+2024-01-17 11:58:19,149 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:19] "GET /static/tmpls/month-day.html?_=1705460298450 HTTP/1.1" 200 -
+2024-01-17 11:58:19,385 - werkzeug - INFO - 127.0.0.1 - - [17/Jan/2024 11:58:19] "GET /static/tmpls/events-list.html?_=1705460298451 HTTP/1.1" 200 -
+2024-01-17 11:58:24,560 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\app.py', reloading
+2024-01-17 11:58:24,605 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:58:25,056 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:58:25,073 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 11:59:53,660 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 11:59:53,711 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 11:59:54,160 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 11:59:54,161 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-17 12:00:01,228 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\userlogin.py', reloading
+2024-01-17 12:00:01,279 - werkzeug - INFO -  * Restarting with stat
+2024-01-17 12:00:02,451 - werkzeug - WARNING -  * Debugger is active!
+2024-01-17 12:00:02,457 - werkzeug - INFO -  * Debugger PIN: 410-817-710
