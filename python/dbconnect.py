@@ -1,6 +1,7 @@
 import pymysql
 import UserController
 
+
 def db_conn():
     db = pymysql.connect(
     user = 'jh',
@@ -25,20 +26,20 @@ def insertUser(userid, email, userpasswd, username, iddate):
     cursor.close()
     con.close()
     
-    return result_num
+    return f'<script>alert("회원가입이 완료되었습니다!")</script>'
 
 #유저삭제
-def deleteUser(userid):
+def deleteUser(userno):
     con = db_conn()
     cursor = con.cursor()
 
-    sql_delete = 'delete from user where userid = %s'
-    result_num = cursor.execute(sql_delete,(userid))
+    sql_delete = 'delete from user where userno = %s'
+    result_num = cursor.execute(sql_delete,(userno))
 
     cursor.close()
     con.close()
     
-    return result_num
+    return '<script>alert("탈퇴하셨습니다!")</script>'
 
 
 #유저정보찾기
@@ -51,6 +52,22 @@ def search_user(userid,userpasswd):
     sql_search = 'select * from user where userid = %s and userpasswd = %s'
     cursor.execute(sql_search,(userid,userpasswd))
 
+    result = cursor.fetchone()
+    
+    cursor.close()
+    con.close()
+
+    return result
+
+#유저정보찾기222222 -> id로만찾음 ( 수정할때 아이디같으면 안된다고하려고)
+def search_user2(userid):
+
+    con = db_conn()
+    cursor = con.cursor(cursor=pymysql.cursors.DictCursor)
+
+    sql_search = 'select * from user where userid = %s '
+    cursor.execute(sql_search,(userid))
+
     #질문 >> 값이 없을때 result값이 무엇인지############-> None임 
     result = cursor.fetchone()
     
@@ -59,9 +76,7 @@ def search_user(userid,userpasswd):
 
     return result
 
-
-
-#유저 정보 출력
+#유저 정보 출력 
 def print_user(userid,userpasswd):
 
     con = db_conn()
@@ -71,7 +86,6 @@ def print_user(userid,userpasswd):
     sql_search = 'select * from user where userid = %s and userpasswd = %s'
     cursor.execute(sql_search,(userid,userpasswd))
 
-    #질문 >> 값이 없을때 result값이 무엇인지############-> None임 
     result = cursor.fetchone()
 
     cursor.close()
@@ -81,20 +95,14 @@ def print_user(userid,userpasswd):
 
 
 #유저 업데이트
-def updateUser(userid, email, userpasswd, username):
-
+def updateUser(userid, email, userpasswd, username, userno):
+    #수정할값들이들어옴
     con = db_conn()
     cursor = con.cursor()
 
-    #입력받은 userid, userpasswd에 대하여 sql테이블user에서 있으면
-    sql_update = 'update user set userid=%s, email=%s, userpasswd=%s where username=%s'
-    result_num = cursor.execute(sql_update,(userid, email, userpasswd, username))
-
-    # sql_insert = 'insert into user (userid, email, userpasswd, username, iddate) values (%s,%s,%s,%s,%s)'
-    # result_num = cursor.execute(sql_insert,(userid, email, userpasswd, username, iddate))
-
+    sql_update = 'update user set userid=%s, email=%s, userpasswd=%s,username=%s where userno=%s'
+    result_num = cursor.execute(sql_update,(userid, email, userpasswd, username, userno))
 
     cursor.close()
     con.close()
-
-    return result_num
+    return '<script>alert("저장되었습니다")</script>'
