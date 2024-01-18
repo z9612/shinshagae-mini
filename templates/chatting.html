@@ -1,39 +1,57 @@
-<!--index.html-->
+<!-- Add this line to include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>채팅방 {{result1[1]}}에 오신걸 환영합니다 .{{result1[2]}}님</title>
-    <H1><center>채팅방 {{result1[1]}}</center> </H1> 
+    <!-- Add Bootstrap styles to the H1 tag -->
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-    chatting.html 입니다.
-    <H2>채팅내역</H2>
-    <table class="table table-hover table-striped text-center" style=" width: 50%; border: 1px  solid #111114;">
+<body class="container">
+    <div class="container mt-3">
+        <p class="lead">chatting.html 입니다.</p>
+        <h2>채팅내역asdasd</h2>
+        <!-- Add Bootstrap table classes -->
+        <table class="table table-hover table-striped text-center">
+            {% for i in range(3,result1[0]+2,2) %}
+                <tr>
+                    {%if result1[i] == session['login_info'].userid : %}
+                        <td style="text-align: end;">{{ result1[i] }}: {{ result1[i+1] }}</td>
+                    {% else %}
+                        <td style="text-align: start;">{{ result1[i] }}: {{ result1[i+1] }}</td>
+                    {%endif%}
+                </tr>
+            {% endfor %}
+        </table>
+        <form action="http://localhost:5000/chatroom/chatting" method="post">
+            <div class="form-group">
+                <label for="chatid">채팅방</label>
+                <input type="text" class="form-control" name="chatid" value="{{ result1[1] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="userno">유저 {{ session['login_info'].userid }}</label>
+                <input type="hidden" name="userno" value="{{ session['login_info'].userid }}">
+            </div>
+            <div class="form-group">
+                <label for="text">메시지를 입력하세요!</label>
+                <input type="text" class="form-control" id="text" name="text" placeholder="메시지를 입력하세요!" size="60">
+            </div>
+            <button type="submit" class="btn btn-primary">채팅입력</button>
+        </form>
+        <br>
+        <a href="http://localhost:5000/chatroom" onclick="leave_room();" class="btn btn-danger">채팅방 나가기</a>
+        <a href="http://localhost:5000/" onclick="leave_room();" class="btn btn-secondary">초기화면으로</a>
+    </div>
 
-    {% for i in range(3,result1[0]+2,2) %}
-		
-            <tr>
-
-
-
-                <td>{{ result1[i]}}:  {{result1[i+1]}}</td>
-
-
-			</tr>
-	{% endfor %}
-    </table>
-    <form action="http://localhost:5000/chatroom/chatting" method="post">
-        <p>채팅방 <input name ='chatid' value="{{result1[1]}}"></p>  
-        <p>유저 {{session['login_info'].userid}} </p>  
-        <input type="hidden" name ='userno' value="{{session['login_info'].userid}}">
-        <input id="text" size="60" placeholder="메시지를 입력하세요!" name ='text'>
-        <tr><input type="submit"  value="채팅입력" /></tr>
-    </form>
-    <br>
-    <a href="http://localhost:5000/chatroom" onclick="leave_room();">채팅방 나가기</a>
-    <a href="http://localhost:5000/" onclick="leave_room();">초기화면으로</a>
-
-
+    <!-- Add this line to include Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
