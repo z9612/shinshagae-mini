@@ -86,17 +86,17 @@ def delete2():
         if action_type == '네':
             d.deleteUser(userno)
             session.pop('login_info', None) #세션에서 데이터 지워줌
-            return 'delete successful, click <a href="/login">here</a> to login again'
+            return render_template('login.html')
         elif action_type =='아니오':
-            return '잘하셨어요, click <a href="/mypage2">here</a> to Mypage agai'
+            return render_template('mypage2.html')
 
 @user_bp.route('/logout')
 def logout():
     if 'login_info' in session :  # 세션에 데이터가 있는지 없는지
         session.pop('login_info', None) #세션에서 데이터 지워줌
-        return render_template('logout.html')
+        return render_template('login.html')
     else :
-        return '이미 로그아웃 되어 있습니다.'
+        return '<script>alert("이미 로그아웃 되어 있습니다.")</script><a href="/login">로그인 다시하기</a>' 
     
 if __name__=='__main__':
     # user_bp.run(debug=True)

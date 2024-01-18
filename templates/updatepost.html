@@ -17,11 +17,12 @@
         <form id="updateForm" method="post">
             <div class="mb-3">
                 <label for="title" class="form-label" >제목</label>
-                <input type="text" id="title" name="title" class="form-control" required>
+                <input type="text" id="title" name="title" class="form-control" value="{{post_data[2]}}"  required>
+
             </div>
             <div class="mb-3">
                 <label for="content" class="form-label">내용</label>
-                <textarea name="content" class="form-control" rows="6"></textarea>
+                <textarea name="content" class="form-control" rows="15" >{{post_data[3]}}</textarea>
             </div>
             <div class="d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary">작성</button>

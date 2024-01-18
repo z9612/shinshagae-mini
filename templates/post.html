@@ -30,7 +30,7 @@
     <form action='/board' method="get" class="mb-3">
         <button type='submit' class="btn btn-primary">목록</button>
     </form>
-    {% if post_list[0][9] == session['login_info'].get('userid') %}
+    {% if post_list[0][10] == session['login_info'].get('userid') %}
         <div class="d-flex justify-content-end align-items-center mb-3" style="height: 38px;">
             <form id="updateForm" action="{{ url_for('board.updatepost', postno=postno) }}" method="post" onsubmit="return confirmUpdate()">
                 <a href="{{ url_for('board.updatepost', postno=postno) }}" class="btn btn-warning">게시글 수정</a>

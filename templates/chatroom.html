@@ -13,18 +13,6 @@
             text-align: center;
         }
 
-        h1 {
-            color: #007bff;
-        }
-
-        h2 {
-            color: #dc3545;
-        }
-
-        h3 {
-            color: #28a745;
-        }
-
         table {
             margin-top: 20px;
             width: 50%;
@@ -36,9 +24,8 @@
             margin-top: 10px;
         }
 
-        a {
-            display: block;
-            margin-top: 20px;
+        /* '초기화면으로 가기' 버튼 가운데 정렬을 위해 추가된 스타일 */
+        .centered {
             text-align: center;
         }
     </style>
@@ -46,16 +33,15 @@
 
 <body>
     <div class="container">
-        <h1>##채팅방입니다##</h1>
-        <h2>#채팅방 ID는 숫자만 가능합니다#</h2>
+        <h1>채팅방입니다</h1>
+        <h2>채팅방 ID는 숫자만 가능합니다</h2>
         <h3>유저 ID를 통해서 채팅방 ID에 일정 공유가 가능합니다</h3>
         <form action="http://localhost:5000/chatroom/chat" method="post">
             <table>
                 <tr>
-                    <td>유저ID ::</td>
                 </tr>
                 <tr>
-                    {{ session['login_info'].userid }}
+                    {{ session['login_info'].userid }} 님의 
                     <input type="hidden" name="userno" value="{{ session['login_info'].userno }}">
                 </tr>
                 <tr>채팅방ID</tr>
@@ -64,7 +50,8 @@
             </table>
         </form>
     </div>
-    <a href="http://localhost:5000/" onclick="leave_room();" class="btn btn-secondary">초기화면으로</a>
+    <!-- '초기화면으로 가기' 버튼에 centered 클래스 추가 -->
+    <a href="http://localhost:5000/" onclick="leave_room();" class="btn btn-secondary centered">초기화면으로</a>
 
     <!-- Bootstrap JS 및 Popper.js 추가 (선택 사항) -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

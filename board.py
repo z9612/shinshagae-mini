@@ -25,7 +25,10 @@ def board():  # 게시판 목록
     page, per_page, offset = get_page_args(
         page_parameter="page", per_page_parameter="per_page"
     )
-    sql = "select b.postno,u.userid,b.title,b.content,b.view_count,b.comment_count,b.create_date,b.modify_date from board b,user u where b.userno=u.userno order by b.postno desc"  # 게시판 목록 불러오는 sql
+    sql = """select b.postno,u.userid,b.title,b.content,b.view_count,b.comment_count,b.create_date,b.modify_date 
+            from board b,user u 
+            where b.userno=u.userno 
+            order by b.postno desc"""  # 게시판 목록 불러오는 sql
     cur.execute(sql)
     data_list = cur.fetchall()
     total = len(data_list)
@@ -84,6 +87,7 @@ def updatepost(postno):  # 게시물 수정 작업
         sql = f"update board set title='{title}',content='{content}' where postno={postno}"
         cur.execute(sql)
         db.commit()
+        
         return redirect(url_for("board.board"))
     elif request.method == "GET":  # 게시물 수정 get방식
         sql = f"select * from board where postno={postno}"
@@ -106,7 +110,9 @@ def delete_list(postno):  # 게시물 삭제 버튼
 def post(postno):  # 게시물 클릭시 내용 확인
     plus_count_view(postno)  # 조회수 증가 함수
 
-    sql_post = f"select b.*,u.userid from board b, user u where postno={postno} and b.userno=u.userno"
+    sql_post = f"""select b.*,u.userid 
+            from board b, user u 
+            where postno={postno} and b.userno=u.userno"""
     cur.execute(sql_post)
     b = cur.fetchall()
     return render_template("post.html", postno=postno, post_list=b, comment_list=get_comments(postno))
@@ -122,7 +128,9 @@ def get_comments(postno):
 
 def plus_count_view(postno):  # 조회수 증가 함수
     if postno is not None:
-        sql = f"update board set view_count=view_count+1 where postno={postno}"  # 조회수 증가 쿼리
+        sql = f"""update board # 조회수 증가 쿼리
+                set view_count=view_count+1 
+                where postno={postno}"""  
         cur.execute(sql)
         db.commit()
 

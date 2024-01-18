@@ -9,14 +9,26 @@
     <!-- Add Bootstrap styles to the H1 tag -->
     <style>
         h1 {
-            text-align: center;
+            text-align: left;
+            color : red;
         }
     </style>
+
+    <!-- Add jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap DateTimePicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+
+
+
 </head>
 <body class="container">
     <div class="container mt-3">
-        <p class="lead">chatting.html 입니다.</p>
-        <h2>채팅내역asdasd</h2>
+        <p class="lead"></p>
+        <h1>채팅내역</h1>
+        <h2>채팅내역</h2>
         <!-- Add Bootstrap table classes -->
         <table class="table table-hover table-striped text-center">
             {% for i in range(3,result1[0]+2,2) %}
@@ -49,9 +61,9 @@
         <a href="http://localhost:5000/" onclick="leave_room();" class="btn btn-secondary">초기화면으로</a>
     </div>
 
+</body>
     <!-- Add this line to include Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
 </html>

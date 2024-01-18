@@ -100,7 +100,7 @@ def chat():
         
 
     else:
-          return 'no data'
+          return render_template('chatroom.html')
 @chat_bp.route('/chatroom/chatting',methods=['POST'])
 def chatting():
     text=request.form['text']

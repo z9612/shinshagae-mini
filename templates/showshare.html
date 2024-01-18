@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% include 'common_head.html' %}
     <title>채팅방{{result1[1]}}</title>
     <H1> 채팅방에 공유된목록</H1> 
 </head>
@@ -16,10 +17,6 @@
             <input type="hidden" name ='event' value="{{result1[i+1]}}">
            <tr><input type="submit"  value="일정공유 추가하기" /></tr>
        </form>
-
-      
-
-
     </tr>
     {% endfor %}
 
@@ -30,4 +27,5 @@
     <a href="http://localhost:5000/" onclick="leave_room();">초기화면으로</a>
 
 </body>
+{% include 'common_script.html' %}
 </html>
