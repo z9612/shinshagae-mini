@@ -20,12 +20,12 @@
     <h1 class="mt-4 mb-4">게시글</h1>
     <hr>
     <div class="mb-4">
-        <h5>제목</h5>
-        <p>{{ post_list[0][2] }}</p>
+        <h2>제목</h5>
+        <p style="font-size: 13pt;">{{ post_list[0][2] }}</p>
     </div>
     <div class="mb-4">
-        <h5>내용</h5>
-        <p style="height: 200px;">{{ post_list[0][3] }}</p>
+        <h5 style="font-size: 12pt;">내용</h5>
+        <p style="height: auto; min-height: 200px; font-size: 10pt;" >{{ post_list[0][3] }}</p>
     </div>
     <form action='/board' method="get" class="mb-3">
         <button type='submit' class="btn btn-primary">목록</button>
