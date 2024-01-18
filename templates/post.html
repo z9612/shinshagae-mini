@@ -25,9 +25,13 @@
     </div>
     <div class="mb-4">
         <h5 style="font-size: 12pt;">내용</h5>
-        <p style="height: auto; min-height: 200px; font-size: 10pt;" >{{ post_list[0][3] }}</p>
-    </div>
+        
+<div style="height: auto; min-height: 200px; font-size: 10pt;">
+<pre>{{ post_list[0][3] }}</pre>
+</div>    
+</div>
     <form action='/board' method="get" class="mb-3">
+        <p style="text-align: right; font-size: 12px;">작성자 : {{post_list[0][10]}}</p>
         <button type='submit' class="btn btn-primary">목록</button>
     </form>
     {% if post_list[0][10] == session['login_info'].get('userid') %}

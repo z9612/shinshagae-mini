@@ -1589,3 +1589,612 @@
 2024-01-18 16:07:26,319 - __main__ - INFO - ·Î±×ÀÎ ÇÊ¿ä
 2024-01-18 16:07:26,320 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:07:26] "[32mGET / HTTP/1.1[0m" 302 -
 2024-01-18 16:07:26,643 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:07:26] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:08:33,239 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:08:33,306 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-18 16:08:33,307 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-01-18 16:08:33,315 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:08:33,857 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:08:33,914 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:08:33,924 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-18 16:08:41,996 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:08:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:08:42,220 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:08:42] "GET /signup HTTP/1.1" 200 -
+2024-01-18 16:08:44,567 - __main__ - INFO - ·Î±×ÀÎ ÇÊ¿ä
+2024-01-18 16:08:44,568 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:08:44] "[32mGET / HTTP/1.1[0m" 302 -
+2024-01-18 16:08:44,884 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:08:44] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:08:50,961 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:08:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:08:51,276 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:08:51] "GET /signup HTTP/1.1" 200 -
+2024-01-18 16:09:08,536 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:08] "POST /signup HTTP/1.1" 200 -
+2024-01-18 16:09:10,978 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:10] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:09:15,101 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:09:15,417 - __main__ - INFO - Home route accessed
+2024-01-18 16:09:15,418 - __main__ - INFO - userno :::57 
+2024-01-18 16:09:15,440 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:15] "GET / HTTP/1.1" 200 -
+2024-01-18 16:09:15,746 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:15] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:15,800 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:15] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:15,810 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:15] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:15,811 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:15] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:09:15,879 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:09:15,905 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:15] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:09:16,229 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:16] "GET /static/tmpls/month.html?_=1705561755823 HTTP/1.1" 200 -
+2024-01-18 16:09:16,483 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:16] "GET /static/tmpls/month-day.html?_=1705561755824 HTTP/1.1" 200 -
+2024-01-18 16:09:16,547 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:16] "GET /static/tmpls/events-list.html?_=1705561755825 HTTP/1.1" 200 -
+2024-01-18 16:09:34,210 - __main__ - INFO - Insert event - user: 57, event_name: Ã¹ ÀÏÁ¤, memo: °­³²¿ª, from_date: 2024-01-18 16:09, end_date: 2024-01-19 16:09, priority: Áß°£
+2024-01-18 16:09:34,297 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:34] "[32mPOST /insert_event HTTP/1.1[0m" 302 -
+2024-01-18 16:09:34,621 - __main__ - INFO - Home route accessed
+2024-01-18 16:09:34,622 - __main__ - INFO - userno :::57 
+2024-01-18 16:09:34,625 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:34] "GET / HTTP/1.1" 200 -
+2024-01-18 16:09:34,877 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:34] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:34,994 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:34] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:34,994 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:34] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:34,996 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:34] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:09:35,052 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:09:35,081 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:35] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:09:35,401 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:35] "GET /static/tmpls/month.html?_=1705561775009 HTTP/1.1" 200 -
+2024-01-18 16:09:35,657 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:35] "GET /static/tmpls/month-day.html?_=1705561775010 HTTP/1.1" 200 -
+2024-01-18 16:09:35,720 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:35] "GET /static/tmpls/events-list.html?_=1705561775011 HTTP/1.1" 200 -
+2024-01-18 16:09:36,486 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:36] "[36mGET /static/img/glyphicons-halflings.png HTTP/1.1[0m" 304 -
+2024-01-18 16:09:37,318 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:37] "[36mGET /static/img/tick.png?2 HTTP/1.1[0m" 304 -
+2024-01-18 16:09:37,320 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:37] "[36mGET /static/img/dark_wood.png HTTP/1.1[0m" 304 -
+2024-01-18 16:09:38,722 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:09:38,759 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:38] "GET /calendar-events?from=1705503600000&to=1705590000000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:09:39,109 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:39] "GET /static/tmpls/day.html?_=1705561775012 HTTP/1.1" 200 -
+2024-01-18 16:09:41,749 - __main__ - INFO - Select one route accessed - event_id: 73
+2024-01-18 16:09:41,842 - __main__ - INFO - Result :: 
+2024-01-18 16:09:41,860 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:41] "GET /calendar_events.html/73 HTTP/1.1" 200 -
+2024-01-18 16:09:42,220 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:42] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:42,221 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:42] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:42,231 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:42] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:42,234 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:42] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:09:55,796 - __main__ - INFO - Update event route accessed - ¼öÁ¤
+2024-01-18 16:09:55,797 - __main__ - INFO - Update event - id: 73, event_name: Ã¹ ÀÏÁ¤(¼öÁ¤), memo: ÇÕÁ¤¿ª, from_date: 2024-01-18 16:09, end_date: 2024-01-20 16:09, priority: ³ôÀ½, userno: 57
+2024-01-18 16:09:55,898 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:55] "[32mPOST /update_event HTTP/1.1[0m" 302 -
+2024-01-18 16:09:56,222 - __main__ - INFO - Home route accessed
+2024-01-18 16:09:56,223 - __main__ - INFO - userno :::57 
+2024-01-18 16:09:56,225 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:56] "GET / HTTP/1.1" 200 -
+2024-01-18 16:09:56,478 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:56] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:56,596 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:56] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:56,597 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:56] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:09:56,598 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:56] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:09:56,655 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:09:56,681 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:56] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:09:57,006 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:57] "GET /static/tmpls/month.html?_=1705561796611 HTTP/1.1" 200 -
+2024-01-18 16:09:57,261 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:57] "GET /static/tmpls/month-day.html?_=1705561796612 HTTP/1.1" 200 -
+2024-01-18 16:09:57,325 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:09:57] "GET /static/tmpls/events-list.html?_=1705561796613 HTTP/1.1" 200 -
+2024-01-18 16:10:02,654 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:10:02,689 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:02] "GET /calendar-events?from=1705503600000&to=1705590000000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:10:03,024 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:03] "GET /static/tmpls/day.html?_=1705561796614 HTTP/1.1" 200 -
+2024-01-18 16:10:07,376 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:10:07,413 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:07] "GET /calendar-events?from=1705158000000&to=1705762800000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:10:07,738 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:07] "GET /static/tmpls/week.html?_=1705561796615 HTTP/1.1" 200 -
+2024-01-18 16:10:07,996 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:07] "GET /static/tmpls/week-days.html?_=1705561796616 HTTP/1.1" 200 -
+2024-01-18 16:10:10,790 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:10:10,821 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:10] "GET /calendar-events?from=1704034800000&to=1735657200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:10:11,154 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:11] "GET /static/tmpls/year.html?_=1705561796617 HTTP/1.1" 200 -
+2024-01-18 16:10:11,410 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:11] "GET /static/tmpls/year-month.html?_=1705561796618 HTTP/1.1" 200 -
+2024-01-18 16:10:13,223 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:10:13,259 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:13] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:10:16,837 - __main__ - INFO - Home route accessed
+2024-01-18 16:10:16,838 - __main__ - INFO - userno :::57 
+2024-01-18 16:10:16,840 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:16] "GET / HTTP/1.1" 200 -
+2024-01-18 16:10:17,093 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:17,191 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:17,192 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:17,202 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:10:17,253 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:10:17,280 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:10:17,603 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "GET /static/tmpls/month.html?_=1705561817208 HTTP/1.1" 200 -
+2024-01-18 16:10:17,860 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "GET /static/tmpls/month-day.html?_=1705561817209 HTTP/1.1" 200 -
+2024-01-18 16:10:17,924 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:17] "GET /static/tmpls/events-list.html?_=1705561817210 HTTP/1.1" 200 -
+2024-01-18 16:10:20,496 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:10:20,531 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:20] "GET /calendar-events?from=1705503600000&to=1705590000000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:10:20,872 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:20] "GET /static/tmpls/day.html?_=1705561817211 HTTP/1.1" 200 -
+2024-01-18 16:10:22,120 - __main__ - INFO - Select one route accessed - event_id: 73
+2024-01-18 16:10:22,213 - __main__ - INFO - Result :: 
+2024-01-18 16:10:22,216 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:22] "GET /calendar_events.html/73 HTTP/1.1" 200 -
+2024-01-18 16:10:22,573 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:22] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:22,586 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:22] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:22,587 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:22] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:22,589 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:22] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:10:25,557 - __main__ - INFO - Delete event - id: 73, userno: 57
+2024-01-18 16:10:25,634 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:25] "[32mPOST /update_event HTTP/1.1[0m" 302 -
+2024-01-18 16:10:25,964 - __main__ - INFO - Home route accessed
+2024-01-18 16:10:25,965 - __main__ - INFO - userno :::57 
+2024-01-18 16:10:25,967 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:25] "GET / HTTP/1.1" 200 -
+2024-01-18 16:10:26,205 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:26] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:26,338 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:26] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:26,338 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:26] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:26,339 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:26] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:10:26,395 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:10:26,420 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:26] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:10:26,747 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:26] "GET /static/tmpls/month.html?_=1705561826352 HTTP/1.1" 200 -
+2024-01-18 16:10:27,003 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:27] "GET /static/tmpls/month-day.html?_=1705561826353 HTTP/1.1" 200 -
+2024-01-18 16:10:27,067 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:27] "GET /static/tmpls/events-list.html?_=1705561826354 HTTP/1.1" 200 -
+2024-01-18 16:10:32,305 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:32] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:10:32,675 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:32] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:32,675 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:32] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:32,678 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:32] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:32,681 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:32] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:10:35,089 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:35] "GET /makepost HTTP/1.1" 200 -
+2024-01-18 16:10:47,033 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:47] "[32mPOST /write_post_action HTTP/1.1[0m" 302 -
+2024-01-18 16:10:47,287 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:47] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:10:47,350 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:47] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:47,662 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:47] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:47,664 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:47] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:47,666 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:47] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:10:50,282 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:50] "GET /post/160 HTTP/1.1" 200 -
+2024-01-18 16:10:50,495 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:50] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:50,641 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:50] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:50,642 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:50] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:10:52,928 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:10:52] "GET /updatepost/160 HTTP/1.1" 200 -
+2024-01-18 16:11:00,885 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:00] "[32mPOST /updatepost/160 HTTP/1.1[0m" 302 -
+2024-01-18 16:11:01,135 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:01] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:11:01,202 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:01] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:01,496 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:01] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:01,507 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:01] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:01,508 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:01] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:03,069 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:03] "GET /post/160 HTTP/1.1" 200 -
+2024-01-18 16:11:03,427 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:03] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:03,429 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:03] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:03,434 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:03] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:06,218 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:06] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:11:06,593 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:06] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:06,594 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:06] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:06,595 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:06] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:06,596 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:06] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:09,022 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:09] "GET /post/160 HTTP/1.1" 200 -
+2024-01-18 16:11:09,377 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:09] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:09,378 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:09] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:09,380 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:09] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:12,343 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:12] "[32mPOST /delete_list/160 HTTP/1.1[0m" 302 -
+2024-01-18 16:11:12,671 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:12] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:11:12,918 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:12] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:13,032 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:13] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:13,035 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:13] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:13,037 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:13] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:15,382 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:15] "GET /post/159 HTTP/1.1" 200 -
+2024-01-18 16:11:15,746 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:15] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:15,748 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:15] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:15,749 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:15] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:24,359 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:24] "[32mPOST /write_comment_action HTTP/1.1[0m" 302 -
+2024-01-18 16:11:24,711 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:24] "GET /post/159 HTTP/1.1" 200 -
+2024-01-18 16:11:24,944 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:24] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:25,056 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:25] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:25,064 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:25] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:27,369 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:27] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:11:27,741 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:27] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:27,741 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:27] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:27,743 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:27] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:27,744 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:27] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:29,152 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:29] "GET /post/153 HTTP/1.1" 200 -
+2024-01-18 16:11:29,502 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:29] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:29,513 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:29] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:29,515 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:29] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:32,724 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:32] "[32mPOST /write_comment_action HTTP/1.1[0m" 302 -
+2024-01-18 16:11:33,064 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:33] "GET /post/153 HTTP/1.1" 200 -
+2024-01-18 16:11:33,298 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:33] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:33,426 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:33] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:33,428 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:33] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:37,083 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:37] "[32mPOST /delete_comment_list83 HTTP/1.1[0m" 302 -
+2024-01-18 16:11:37,437 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:37] "GET /post/153 HTTP/1.1" 200 -
+2024-01-18 16:11:37,655 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:37] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:37,786 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:37] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:37,788 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:37] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:39,336 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:39] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:11:39,685 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:39] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:39,697 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:39] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:39,699 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:39] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:39,700 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:39] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:41,739 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:41] "GET /board?page=2 HTTP/1.1" 200 -
+2024-01-18 16:11:42,090 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:42] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:42,092 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:42] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:42,104 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:42] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:42,105 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:42] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:43,621 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:43] "GET /board?page=3 HTTP/1.1" 200 -
+2024-01-18 16:11:43,969 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:43] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:43,981 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:43] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:43,983 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:43] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:43,984 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:43] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:45,112 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:45] "GET /board?page=4 HTTP/1.1" 200 -
+2024-01-18 16:11:45,472 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:45] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:45,472 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:45] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:45,474 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:45] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:45,475 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:45] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:11:47,215 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:47] "GET /board?page=3 HTTP/1.1" 200 -
+2024-01-18 16:11:47,580 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:47] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:47,582 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:47] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:47,583 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:47] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:11:47,586 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:11:47] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:12:16,164 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:16] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:12:23,187 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:23] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:12:23,375 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:23] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:12:23,557 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:23] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:12:23,558 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:23] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:12:23,559 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:23] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:12:31,222 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:31] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:12:41,787 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:41] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:12:48,122 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:48] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:12:56,127 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:56] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:12:58,569 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:58] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:12:58,931 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:58] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:12:58,931 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:58] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:12:58,933 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:58] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:12:58,934 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:12:58] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:13:02,625 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:02] "POST /chatroom/share HTTP/1.1" 200 -
+2024-01-18 16:13:02,983 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:02] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:02,986 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:02] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:02,986 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:02] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:02,988 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:02] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:13:05,352 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:05] "GET /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:13:07,645 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:07] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:13:07,821 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:07] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:07,999 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:07] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:08,000 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:08] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:08,002 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:08] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:13:09,222 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:09] "POST /chatroom/share HTTP/1.1" 200 -
+2024-01-18 16:13:09,579 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:09] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:09,580 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:09] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:09,581 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:09] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:09,583 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:09] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:13:11,321 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:11] "POST /chatroom/date HTTP/1.1" 200 -
+2024-01-18 16:13:13,034 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:13] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:13:15,073 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:15] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:13:15,424 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:15] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:15,436 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:15] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:15,437 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:15] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:15,439 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:15] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:13:17,171 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:17] "POST /chatroom/share HTTP/1.1" 200 -
+2024-01-18 16:13:17,512 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:17] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:17,515 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:17] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:17,518 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:17] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:13:17,518 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:17] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:13:20,928 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:13:20] "GET /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:14:17,201 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:17] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:14:17,392 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:17] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:14:17,555 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:17] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:14:17,555 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:17] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:14:17,557 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:17] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:14:22,728 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:22] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:14:28,307 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:28] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:14:37,195 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:37] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:14:42,228 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:42] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:14:57,127 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:57] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:14:58,957 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:58] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:14:58,985 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:58] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:14:59,300 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:59] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:14:59,302 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:59] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:14:59,303 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:14:59] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:15:02,795 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:02] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:15:16,870 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:16] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:15:42,219 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:42] "GET /logout HTTP/1.1" 200 -
+2024-01-18 16:15:47,251 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:15:47,526 - __main__ - INFO - Home route accessed
+2024-01-18 16:15:47,527 - __main__ - INFO - userno :::6 
+2024-01-18 16:15:47,529 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:47] "GET / HTTP/1.1" 200 -
+2024-01-18 16:15:47,880 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:47] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:15:47,882 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:47] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:15:47,883 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:47] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:15:47,885 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:47] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:15:48,129 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:15:48,155 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:48] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:15:48,224 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:48] "GET /static/tmpls/month.html?_=1705562147894 HTTP/1.1" 200 -
+2024-01-18 16:15:48,480 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:48] "GET /static/tmpls/month-day.html?_=1705562147895 HTTP/1.1" 200 -
+2024-01-18 16:15:48,544 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:48] "GET /static/tmpls/events-list.html?_=1705562147896 HTTP/1.1" 200 -
+2024-01-18 16:15:53,325 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:15:53] "[36mGET /static/img/glyphicons-halflings.png HTTP/1.1[0m" 304 -
+2024-01-18 16:18:26,593 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:26] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:18:26,663 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:26] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:26,837 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:26] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:26,932 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:26] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:26,933 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:26] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:18:27,829 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:27] "GET /post/159 HTTP/1.1" 200 -
+2024-01-18 16:18:28,095 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:28] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:28,160 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:28] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:28,162 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:28] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:47,851 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:47] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:18:47,881 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:47] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:48,100 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:48] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:48,196 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:48] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:48,197 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:48] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:18:49,510 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:49] "GET /board?page=4 HTTP/1.1" 200 -
+2024-01-18 16:18:49,598 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:49] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:49,757 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:49] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:49,853 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:49] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:49,855 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:49] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:18:51,383 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:51] "GET /board?page=3 HTTP/1.1" 200 -
+2024-01-18 16:18:51,685 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:51] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:51,718 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:51] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:51,720 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:51] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:51,721 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:51] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:18:55,064 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:55] "GET /post/131 HTTP/1.1" 200 -
+2024-01-18 16:18:55,137 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:55] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:55,296 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:55] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:55,409 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:55] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:56,395 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:56] "GET /board HTTP/1.1" 200 -
+2024-01-18 16:18:56,701 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:56] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:56,732 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:56] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:56,732 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:56] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:56,733 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:56] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:18:58,847 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:58] "GET /post/157 HTTP/1.1" 200 -
+2024-01-18 16:18:58,935 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:58] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:59,079 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:59] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:18:59,190 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:18:59] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:19:35,033 - __main__ - INFO - Home route accessed
+2024-01-18 16:19:35,034 - __main__ - INFO - userno :::6 
+2024-01-18 16:19:35,035 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:35] "GET / HTTP/1.1" 200 -
+2024-01-18 16:19:35,333 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:35] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:19:35,382 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:35] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:19:35,383 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:35] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:19:35,384 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:35] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:19:35,728 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:19:35,771 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:35] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:19:35,994 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:35] "GET /static/tmpls/month.html?_=1705562375392 HTTP/1.1" 200 -
+2024-01-18 16:19:36,089 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:36] "GET /static/tmpls/month-day.html?_=1705562375393 HTTP/1.1" 200 -
+2024-01-18 16:19:36,313 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:36] "GET /static/tmpls/events-list.html?_=1705562375394 HTTP/1.1" 200 -
+2024-01-18 16:19:48,680 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:48] "GET /logout HTTP/1.1" 200 -
+2024-01-18 16:19:51,822 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:51] "POST /login HTTP/1.1" 200 -
+2024-01-18 16:19:53,288 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:19:53] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:20:02,375 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:02] "GET /logout HTTP/1.1" 200 -
+2024-01-18 16:20:04,958 - __main__ - INFO - ·Î±×ÀÎ ÇÊ¿ä
+2024-01-18 16:20:04,959 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:04] "[32mGET / HTTP/1.1[0m" 302 -
+2024-01-18 16:20:05,255 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:05] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:20:13,348 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:20:13,357 - __main__ - INFO - Home route accessed
+2024-01-18 16:20:13,358 - __main__ - INFO - userno :::6 
+2024-01-18 16:20:13,359 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:13] "GET / HTTP/1.1" 200 -
+2024-01-18 16:20:13,557 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:13] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:20:13,702 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:13] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:20:13,703 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:13] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:20:13,711 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:13] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:20:14,050 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:20:14,078 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:14] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:20:14,308 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:14] "GET /static/tmpls/month.html?_=1705562413714 HTTP/1.1" 200 -
+2024-01-18 16:20:14,403 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:14] "GET /static/tmpls/month-day.html?_=1705562413715 HTTP/1.1" 200 -
+2024-01-18 16:20:14,624 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:14] "GET /static/tmpls/events-list.html?_=1705562413716 HTTP/1.1" 200 -
+2024-01-18 16:20:18,422 - __main__ - INFO - Home route accessed
+2024-01-18 16:20:18,423 - __main__ - INFO - userno :::57 
+2024-01-18 16:20:18,424 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:18] "GET / HTTP/1.1" 200 -
+2024-01-18 16:20:18,679 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:18] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:20:18,760 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:18] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:20:18,760 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:18] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:20:18,762 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:18] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:20:19,043 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:20:19,077 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:19] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:20:19,154 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:19] "GET /static/tmpls/month.html?_=1705562418772 HTTP/1.1" 200 -
+2024-01-18 16:20:19,393 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:19] "GET /static/tmpls/month-day.html?_=1705562418773 HTTP/1.1" 200 -
+2024-01-18 16:20:19,475 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:20:19] "GET /static/tmpls/events-list.html?_=1705562418774 HTTP/1.1" 200 -
+2024-01-18 16:21:02,857 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:02] "GET /logout HTTP/1.1" 200 -
+2024-01-18 16:21:06,370 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:21:06,590 - __main__ - INFO - Home route accessed
+2024-01-18 16:21:06,590 - __main__ - INFO - userno :::6 
+2024-01-18 16:21:06,592 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:06] "GET / HTTP/1.1" 200 -
+2024-01-18 16:21:06,685 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:06] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:06,927 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:06] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:06,928 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:06] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:06,928 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:06] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:21:06,963 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:21:06,988 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:06] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:21:07,308 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:07] "GET /static/tmpls/month.html?_=1705562466934 HTTP/1.1" 200 -
+2024-01-18 16:21:07,563 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:07] "GET /static/tmpls/month-day.html?_=1705562466935 HTTP/1.1" 200 -
+2024-01-18 16:21:07,627 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:07] "GET /static/tmpls/events-list.html?_=1705562466936 HTTP/1.1" 200 -
+2024-01-18 16:21:15,693 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:15] "GET /logout HTTP/1.1" 200 -
+2024-01-18 16:21:20,667 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:21:20,882 - __main__ - INFO - Home route accessed
+2024-01-18 16:21:20,883 - __main__ - INFO - userno :::32 
+2024-01-18 16:21:20,885 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:20] "GET / HTTP/1.1" 200 -
+2024-01-18 16:21:20,993 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:20] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:21,253 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:21] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:21,254 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:21] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:21,255 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:21] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:21:21,308 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:21:21,335 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:21] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:21:21,663 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:21] "GET /static/tmpls/month.html?_=1705562481283 HTTP/1.1" 200 -
+2024-01-18 16:21:21,901 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:21] "GET /static/tmpls/month-day.html?_=1705562481284 HTTP/1.1" 200 -
+2024-01-18 16:21:21,982 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:21] "GET /static/tmpls/events-list.html?_=1705562481285 HTTP/1.1" 200 -
+2024-01-18 16:21:23,418 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:23] "GET /mypage2 HTTP/1.1" 200 -
+2024-01-18 16:21:23,768 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:23] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:23,769 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:23] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:23,770 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:23] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:23,772 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:23] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:21:27,802 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:27] "[32mPOST /mypage2 HTTP/1.1[0m" 302 -
+2024-01-18 16:21:28,126 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:28] "GET /update2 HTTP/1.1" 200 -
+2024-01-18 16:21:28,377 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:28] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:28,494 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:28] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:28,494 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:28] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:21:28,495 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:28] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:44,761 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:44] "POST /update2 HTTP/1.1" 200 -
+2024-01-18 16:21:47,457 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:47] "GET /update2 HTTP/1.1" 200 -
+2024-01-18 16:21:47,711 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:47] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:47,812 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:47] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:47,812 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:47] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:21:47,813 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:47] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:21:56,393 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:56] "POST /update2 HTTP/1.1" 200 -
+2024-01-18 16:21:58,314 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:21:58] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:22:01,305 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:01] "POST /login HTTP/1.1" 200 -
+2024-01-18 16:22:03,257 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:03] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:22:05,283 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:22:05,601 - __main__ - INFO - Home route accessed
+2024-01-18 16:22:05,602 - __main__ - INFO - userno :::32 
+2024-01-18 16:22:05,604 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:05] "GET / HTTP/1.1" 200 -
+2024-01-18 16:22:05,860 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:05] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:05,975 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:05] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:05,976 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:05] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:05,977 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:05] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:22:06,032 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:22:06,059 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:06] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:22:06,385 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:06] "GET /static/tmpls/month.html?_=1705562525992 HTTP/1.1" 200 -
+2024-01-18 16:22:06,625 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:06] "GET /static/tmpls/month-day.html?_=1705562525993 HTTP/1.1" 200 -
+2024-01-18 16:22:06,703 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:06] "GET /static/tmpls/events-list.html?_=1705562525994 HTTP/1.1" 200 -
+2024-01-18 16:22:07,422 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:07] "GET /mypage2 HTTP/1.1" 200 -
+2024-01-18 16:22:07,767 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:07] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:07,779 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:07] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:07,780 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:07] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:07,781 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:07] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:22:10,370 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:10] "[32mPOST /mypage2 HTTP/1.1[0m" 302 -
+2024-01-18 16:22:10,703 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:10] "GET /delete2 HTTP/1.1" 200 -
+2024-01-18 16:22:10,954 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:10] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:11,070 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:11] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:11,072 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:11] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:11,072 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:11] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:22:13,465 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:13] "POST /delete2 HTTP/1.1" 200 -
+2024-01-18 16:22:17,449 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:17] "POST /login HTTP/1.1" 200 -
+2024-01-18 16:22:18,944 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:18] "GET /login HTTP/1.1" 200 -
+2024-01-18 16:22:22,350 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:22:22,570 - __main__ - INFO - Home route accessed
+2024-01-18 16:22:22,571 - __main__ - INFO - userno :::6 
+2024-01-18 16:22:22,572 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:22] "GET / HTTP/1.1" 200 -
+2024-01-18 16:22:22,666 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:22] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:22,944 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:22] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:22,945 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:22] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:22,945 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:22] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:22:22,992 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:22:23,020 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:23] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:22:23,337 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:23] "GET /static/tmpls/month.html?_=1705562542958 HTTP/1.1" 200 -
+2024-01-18 16:22:23,593 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:23] "GET /static/tmpls/month-day.html?_=1705562542959 HTTP/1.1" 200 -
+2024-01-18 16:22:23,655 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:23] "GET /static/tmpls/events-list.html?_=1705562542960 HTTP/1.1" 200 -
+2024-01-18 16:22:28,286 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:28] "GET /logout HTTP/1.1" 200 -
+2024-01-18 16:22:34,738 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-01-18 16:22:34,961 - __main__ - INFO - Home route accessed
+2024-01-18 16:22:34,962 - __main__ - INFO - userno :::6 
+2024-01-18 16:22:34,964 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:34] "GET / HTTP/1.1" 200 -
+2024-01-18 16:22:35,057 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:35,297 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:35,299 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:35,304 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:22:35,331 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:22:35,360 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:22:35,678 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "GET /static/tmpls/month.html?_=1705562555308 HTTP/1.1" 200 -
+2024-01-18 16:22:35,932 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "GET /static/tmpls/month-day.html?_=1705562555309 HTTP/1.1" 200 -
+2024-01-18 16:22:35,995 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:35] "GET /static/tmpls/events-list.html?_=1705562555310 HTTP/1.1" 200 -
+2024-01-18 16:22:36,267 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:36] "GET /mypage2 HTTP/1.1" 200 -
+2024-01-18 16:22:36,329 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:36] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:36,603 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:36] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:36,603 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:36] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:22:36,604 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:36] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:22:48,499 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:48] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:22:57,814 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:22:57] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:23:00,188 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:00] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:23:00,538 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:00] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:00,551 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:00] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:00,551 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:00] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:00,553 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:00] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:23:05,804 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:05] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:23:13,055 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:13] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:23:17,962 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:17] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:23:24,922 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:24] "POST /chatroom/chatting HTTP/1.1" 200 -
+2024-01-18 16:23:27,971 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:27] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:23:30,450 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:30] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:23:30,652 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:30] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:30,818 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:30] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:30,818 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:30] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:30,819 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:30] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:23:35,987 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:35] "POST /chatroom/dateroom HTTP/1.1" 200 -
+2024-01-18 16:23:37,528 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:37] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:23:39,199 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:39] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:23:39,555 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:39] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:39,558 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:39] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:39,559 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:39] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:39,561 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:39] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:23:41,134 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:41] "POST /chatroom/share HTTP/1.1" 200 -
+2024-01-18 16:23:41,483 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:41] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:41,486 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:41] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:41,496 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:41] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:41,498 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:41] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:23:48,729 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:48] "GET /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:23:50,899 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:50] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:23:51,089 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:51] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:51,255 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:51] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:51,255 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:51] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:51,257 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:51] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:23:53,952 - __main__ - INFO - Home route accessed
+2024-01-18 16:23:53,953 - __main__ - INFO - userno :::6 
+2024-01-18 16:23:53,955 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:53] "GET / HTTP/1.1" 200 -
+2024-01-18 16:23:54,308 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:54] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:54,309 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:54] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:54,309 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:54] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:23:54,311 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:54] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:23:54,554 - __main__ - INFO - Calendar events route accessed
+2024-01-18 16:23:54,583 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:54] "GET /calendar-events?from=1704034800000&to=1706713200000&utc_offset_from=-540&utc_offset_to=-540 HTTP/1.1" 200 -
+2024-01-18 16:23:54,682 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:54] "GET /static/tmpls/month.html?_=1705562634341 HTTP/1.1" 200 -
+2024-01-18 16:23:54,905 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:54] "GET /static/tmpls/month-day.html?_=1705562634342 HTTP/1.1" 200 -
+2024-01-18 16:23:55,002 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:55] "GET /static/tmpls/events-list.html?_=1705562634343 HTTP/1.1" 200 -
+2024-01-18 16:23:55,703 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:23:55] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:24:00,373 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:00] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:24:00,429 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:00] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:00,746 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:00] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:00,748 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:00] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:00,748 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:00] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:24:03,198 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:03] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:24:05,405 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:05] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:24:05,786 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:05] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:05,786 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:05] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:05,788 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:05] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:05,789 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:05] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:24:07,267 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:07] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:24:09,632 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:09] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:24:09,762 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:09] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:10,008 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:10] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:10,009 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:10] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:10,009 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:10] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:24:11,307 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:11] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:24:38,414 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:38] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:24:38,596 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:38] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:38,756 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:38] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:38,758 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:38] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:38,759 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:38] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:24:49,490 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:49] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:24:49,824 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:49] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:49,832 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:49] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:49,832 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:49] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:49,833 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:49] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:24:51,191 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:51] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:24:53,480 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:53] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:24:53,656 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:53] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:53,820 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:53] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:53,820 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:53] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:24:53,821 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:53] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:24:55,009 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:24:55] "GET /chatroom HTTP/1.1" 200 -
+2024-01-18 16:25:04,488 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:04] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:25:04,653 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:04] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:25:04,832 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:04] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:25:04,833 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:04] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:25:04,833 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:04] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:25:33,467 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\chat_main.py', reloading
+2024-01-18 16:25:33,521 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:25:33,977 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:25:34,026 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:25:34,034 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-18 16:25:35,056 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\chat_main.py', reloading
+2024-01-18 16:25:35,119 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:25:35,568 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:25:35,641 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:25:35,651 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-18 16:25:38,681 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\chat_main.py', reloading
+2024-01-18 16:25:38,730 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:25:39,175 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:25:39,227 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:25:39,235 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-18 16:25:42,587 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:42] "POST /chatroom/chat HTTP/1.1" 200 -
+2024-01-18 16:25:42,763 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:42] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-01-18 16:25:42,943 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:42] "[36mGET /static/css/bootstrap-responsive.css HTTP/1.1[0m" 304 -
+2024-01-18 16:25:42,943 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:42] "[36mGET /static/css/calendar.min.css HTTP/1.1[0m" 304 -
+2024-01-18 16:25:42,944 - werkzeug - INFO - 127.0.0.1 - - [18/Jan/2024 16:25:42] "[36mGET /static/js/calendar.min.js HTTP/1.1[0m" 304 -
+2024-01-18 16:26:06,434 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\chat_main.py', reloading
+2024-01-18 16:26:06,481 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:26:06,911 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:26:06,963 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:26:06,972 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-18 16:26:07,996 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\chat_main.py', reloading
+2024-01-18 16:26:08,049 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:26:08,490 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:26:08,541 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:26:08,548 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-18 16:26:10,575 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\chat_main.py', reloading
+2024-01-18 16:26:10,626 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:26:10,999 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:26:11,062 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:26:11,069 - werkzeug - INFO -  * Debugger PIN: 410-817-710
+2024-01-18 16:26:14,103 - werkzeug - INFO -  * Detected change in 'c:\\Users\\TECH3-12\\web_project\\chat_main.py', reloading
+2024-01-18 16:26:14,152 - werkzeug - INFO -  * Restarting with stat
+2024-01-18 16:26:14,549 - chat_main - DEBUG - This is a debug message from chat_main.py
+2024-01-18 16:26:14,599 - werkzeug - WARNING -  * Debugger is active!
+2024-01-18 16:26:14,605 - werkzeug - INFO -  * Debugger PIN: 410-817-710
