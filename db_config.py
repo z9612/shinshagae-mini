@@ -48,7 +48,6 @@ class EventDao:
     def select_one(self, event_id):
         cursor = None
         try:
-            #한글이 들어왔을 때 예외처리 (ex: kkk)
             logger.info(f"select_one - event_id: {event_id}")
             cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
             sql = "SELECT * FROM event where id=%s;"
