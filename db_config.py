@@ -5,7 +5,7 @@ import logging
 from logging.config import fileConfig
 
 # 로깅 설정
-fileConfig('logging.conf', encoding='utf-8')
+#fileConfig('logging.conf', encoding='utf-8')
 logger = logging.getLogger(__name__)
 
 class db_connection: 

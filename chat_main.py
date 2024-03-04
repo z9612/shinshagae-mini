@@ -9,7 +9,7 @@ app =Flask(__name__)
 chat_bp = Blueprint("chat", __name__)
 
 # 로깅 설정
-fileConfig('logging.conf', encoding='utf-8')
+#fileConfig('logging.conf', encoding='utf-8')
 logger = logging.getLogger(__name__)
 bp_logger = logging.getLogger(__name__ + '.chat_bp')
 

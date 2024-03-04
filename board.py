@@ -6,15 +6,15 @@ import math
 import pymysql
 
 db = pymysql.connect( # DB mysql 연결
-    host="database-1.cyrzsv0jbwjm.ap-northeast-2.rds.amazonaws.com",
-    user="jjh",
-    passwd="12345",
+    user='nana',
+    passwd='nana1234',
+    host='database-1.cvgatyvcfvop.ap-northeast-2.rds.amazonaws.com',
     db="project",
     charset="utf8",
 )
 
 cur = db.cursor() 
-fileConfig('logging.conf', encoding='utf-8')
+#fileConfig('logging.conf', encoding='utf-8')
 logger = logging.getLogger(__name__)
 board_bp = Blueprint("board", __name__)
 
