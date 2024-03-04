@@ -70,12 +70,11 @@ class EventDao:
             end_date = datetime.strptime(end_date, "%Y-%m-%d %H:%M")
             cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
 
-            match priority:
-                case '높음':
+            if priority=='높음':
                     priority = 'event-important'
-                case '중간':
+            elif priority=='중간':
                     priority = 'event-info'
-                case '낮음':
+            elif priority=='낮음':
                     priority = ''
 
             sql = "insert into event(title, memo, start_date, end_date, class, userno) values(%s, %s, %s, %s, %s, %s)"
@@ -96,12 +95,11 @@ class EventDao:
             logger.info(f"update_event - event_id: {event_id}, userno: {userno}")
             cursor = db_connection.get_db().cursor(pymysql.cursors.DictCursor)
 
-            match priority:
-                case '높음':
+            if priority=='높음':
                     priority = 'event-important'
-                case '중간':
+            elif priority=='중간':
                     priority = 'event-info'
-                case '낮음':
+            elif priority=='낮음':
                     priority = ''
 
             sql = "UPDATE event SET title=%s, memo=%s, start_date=%s, end_date=%s, class=%s WHERE id=%s and userno=%s"
