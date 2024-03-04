@@ -12,7 +12,7 @@
 		
     <tr>
 
-        <form action="http://localhost:5000/chatroom/date" method="post">
+        <form action="/chatroom/date" method="post">
             <td> 유저{{ result1[i]}}가 공유한일정 : {{result1[i+1]}}</td> <input type="hidden" name='chatid' value="{{result1[1]}}">    ,유저{{result1[2]}} <input type="hidden"name ='userno' value="{{result1[2]}}" >
             <input type="hidden" name ='event' value="{{result1[i+1]}}">
            <tr><input type="submit"  value="일정공유 추가하기" /></tr>
@@ -23,8 +23,8 @@
     <br>
     <br>
     <br>
-    <a href="http://localhost:5000/chatroom/chat" onclick="leave_room();">채팅방 나가기</a>
-    <a href="http://localhost:5000/" onclick="leave_room();">초기화면으로</a>
+    <a href="/chatroom/chat" onclick="leave_room();">채팅방 나가기</a>
+    <a href="/" onclick="leave_room();">초기화면으로</a>
 
 </body>
 {% include 'common_script.html' %}

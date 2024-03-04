@@ -36,7 +36,7 @@
         <h1>채팅방입니다</h1>
         <h2>채팅방 ID는 숫자만 가능합니다</h2>
         <h3>유저 ID를 통해서 채팅방 ID에 일정 공유가 가능합니다</h3>
-        <form action="http://localhost:5000/chatroom/chat" method="post">
+        <form action="/chatroom/chat" method="post">
             <table>
                 <tr>
                 </tr>
@@ -51,7 +51,7 @@
         </form>
     </div>
     <!-- '초기화면으로 가기' 버튼에 centered 클래스 추가 -->
-    <a href="http://localhost:5000/" onclick="leave_room();" class="btn btn-secondary centered">초기화면으로</a>
+    <a href="/" onclick="leave_room();" class="btn btn-secondary centered">초기화면으로</a>
 
     <!-- Bootstrap JS 및 Popper.js 추가 (선택 사항) -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

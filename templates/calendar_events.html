@@ -42,7 +42,7 @@
 			<div class="span2">
 				<h4>등록할 일정을 입력해주세요</h4>
 				<div id="event-details">
-					<form action="http://localhost:5000/insert_event" method="POST">
+					<form action="/insert_event" method="POST">
 						<p>일정명<input type="text" name="event_name" required /></p>
 						<p>메모 <input type="text" name="memo" /></p>
 						<!-- 수정된 부분: 시작 날짜에 datetimepicker 적용 -->
@@ -109,7 +109,7 @@
 			(function ($) {
 				"use strict";
 				var options = {
-					events_source: 'http://localhost:5000/calendar-events',
+					events_source: '/calendar-events',
 					view: 'month',
 					tmpl_path: '../../static/tmpls/',
 					tmpl_cache: false,

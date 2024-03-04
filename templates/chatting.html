@@ -41,7 +41,7 @@
                 </tr>
             {% endfor %}
         </table>
-        <form action="http://localhost:5000/chatroom/chatting" method="post">
+        <form action="/chatroom/chatting" method="post">
             <div class="form-group">
                 <label for="chatid">채팅방</label>
                 <input type="text" class="form-control" name="chatid" value="{{ result1[1] }}" readonly>
@@ -57,8 +57,8 @@
             <button type="submit" class="btn btn-primary">채팅입력</button>
         </form>
         <br>
-        <a href="http://localhost:5000/chatroom" onclick="leave_room();" class="btn btn-danger">채팅방 나가기</a>
-        <a href="http://localhost:5000/" onclick="leave_room();" class="btn btn-secondary">초기화면으로</a>
+        <a href="/chatroom" onclick="leave_room();" class="btn btn-danger">채팅방 나가기</a>
+        <a href="/" onclick="leave_room();" class="btn btn-secondary">초기화면으로</a>
     </div>
 
 </body>

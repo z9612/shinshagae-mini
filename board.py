@@ -61,7 +61,7 @@ def get_pagination(
 
 @board_bp.route("/makepost")
 def makepost():  # 게시물 작성 페이지 이동
-    return render_template("makepost.html")
+    return render_template("dnf주소/makepost.html")
 
 
 @board_bp.route("/write_post_action", methods=["GET", "POST"])
