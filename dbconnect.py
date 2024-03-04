@@ -4,9 +4,9 @@ import UserController
 
 def db_conn():
     db = pymysql.connect(
-    user = 'jh',
-    passwd = '12345',
-    host = 'database-1.cyrzsv0jbwjm.ap-northeast-2.rds.amazonaws.com',
+    user = 'nana',
+    passwd = 'nana1234',
+    host = 'database-1.cvgatyvcfvop.ap-northeast-2.rds.amazonaws.com',
     db = 'project',
     charset = 'utf8',
     autocommit = True
