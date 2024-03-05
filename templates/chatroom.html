@@ -43,6 +43,8 @@
                 <tr>
                     {{ session['login_info'].userid }} 님의 
                     <input type="hidden" name="userno" value="{{ session['login_info'].userno }}">
+		     <input type="hidden" name="userid" value="{{ session['login_info'].userid }}">
+
                 </tr>
                 <tr>채팅방ID</tr>
                 <tr><input type="text" name="chatid"></tr>

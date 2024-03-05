@@ -32,6 +32,7 @@
                 <div class="col-md-6">{{ result1[i] }}</div>
                 <div class="col-md-6">
                     <form action="/chatroom/dateroom" method="post">
+			<input type="hidden" name="userid" value="{{session['login_info'].userid}}">
                         <input type="hidden" name="chatid" value="{{ result1[0] }}">
                         <input type="hidden" name="userno" value="{{ result1[1] }}">
                         <input type="hidden" name="event" value="{{ result1[i] }}">
@@ -43,6 +44,7 @@
             <form action="/chatroom/share" method="post">
                 <input name="chatid" value="{{result1[0]}}" type="hidden">
                 <input type="hidden" name="userno" value="{{session['login_info'].userno}}">
+		 
                 <button type="submit" class="btn btn-primary">채팅방 일정 보기</button>
             </form>
         </div>

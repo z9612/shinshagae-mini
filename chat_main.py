@@ -23,6 +23,15 @@ def index():
     print("로그 끝")
     return render_template('chatroom.html')
 
+@chat_bp.route("/chatroom2",methods=['POST','GET'])
+def chatroom2():
+    id=request.form["id"]
+    title=request.form["title"]
+    print(title)
+    result=[]
+    result.append(title)
+    return render_template('chatroom2.html',result=result)
+
 @chat_bp.route('/chatroom/share',methods=['POST','GET'])
 def share():
     chatid=request.form["chatid"]
@@ -41,11 +50,41 @@ def share():
         result2.append(result1[i]['event'])
     
     return render_template('showshare.html',result1=result2)
+@chat_bp.route('/chatroom/sharing', methods=['POST','GET'])
+def sharing():
+    print('here')
+    if request.method=='POST':
+            title=request.form["title"]        
+            userno=request.form["userno"]
+            chatid=request.form["chatid"]
+            #userid=request.form["userid"]
+           # print(userid) 
+            if chatid:
+                is_chat=chatdb.SearchChatRoom(chatid)
+
+                is_date=chatdb.ShowDate(userno)
+
+
+                for i in range(len(is_date)):
+                    if(title==is_date[i]['title']):
+                       result1=[]
+                       result1.append(chatid)
+                       result1.append(userno)
+                       result1.append(title)
+                 #      result1.append(userid)
+                 #     print(result1[0])
+                 #     print(result1[1])
+                 #     print(result1[2])
+                       return render_template("chat2.html",result1=result1)
 
 @chat_bp.route('/chatroom/dateroom',methods=['POST','GET'])
 def dateroom():
     userno=request.form["userno"]
     chatid=request.form["chatid"]
+    print('here')
+    #userid=request.form["userid"]
+   
+   #print('dateroom = ' ,userid)
     event=request.form["event"]
     shr_event=chatdb.ShareDate(userno,chatid,event)
     return render_template('dateroom.html')

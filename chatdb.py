@@ -28,6 +28,7 @@ def ShowShareDate(chatid):
 def ShareDate(userno,chatid,event):
     con =db_conn()
     cursor=con.cursor()
+    print(userno , " " , chatid ," " , event)
     sql_insert='insert into project.shareevent (userno,chatid,event)  values(%s,%s,%s);'
     result_num=cursor.execute(sql_insert,(userno,chatid,event))
     cursor.close()
@@ -37,6 +38,8 @@ def ShareDate(userno,chatid,event):
 def SShareDate(userno,event):
     con =db_conn()
     cursor=con.cursor()
+    print('check1\n')
+    print('userno = ' ,userno ,'event = ',event)
     sql_insert='insert into project.event (userno,title)  values(%s,%s);'
     result_num=cursor.execute(sql_insert,(userno,event))
     cursor.close()

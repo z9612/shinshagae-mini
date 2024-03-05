@@ -67,8 +67,8 @@
                 </div>
             </div>
         </form>
-        <form action="{{ url_for('chat.index') }}" method="GET" id="shareForm">
-            <input type="hidden" value="{{ result['id'] }}" name="id" required readonly>
+        <form action="/chatroom2" method="POST" id="shareForm">
+            <input type="hidden" value="{{ result['id'] }}" name="id" required readonly >
             <input type="hidden" value="{{ result['title'] }}" name="title" required readonly>
             <input type="hidden" value="{{ result['memo'] }}" name="memo" required readonly>
             <input type="hidden" value="{{ result['start_date'] }}" name="start_date" required readonly>

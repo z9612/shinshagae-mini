@@ -13,7 +13,8 @@
     <tr>
 
         <form action="/chatroom/date" method="post">
-            <td> 유저{{ result1[i]}}가 공유한일정 : {{result1[i+1]}}</td> <input type="hidden" name='chatid' value="{{result1[1]}}">    ,유저{{result1[2]}} <input type="hidden"name ='userno' value="{{result1[2]}}" >
+            <td> 유저{{ result1[i]}}가 공유한일정 : {{result1[i+1]}}</td> <input type="hidden" name='chatid' value="{{result1[1]}}">    <input type="hidden"name ='userno' value="{{result1[2]}}" >
+	    <input type="hidden" name="userid" value="{{session['login_info'].userid}}"> 
             <input type="hidden" name ='event' value="{{result1[i+1]}}">
            <tr><input type="submit"  value="일정공유 추가하기" /></tr>
        </form>
