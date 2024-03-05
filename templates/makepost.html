@@ -18,7 +18,7 @@
 
 <body>
     <div class="container mt-5">
-        <form action="/write_post_action" method="post">
+        <form action="/write_post_action" method="post", enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="title" class="form-label" required>제목</label>
                 <input type="text" id="title" name="title" class="form-control">
@@ -27,6 +27,7 @@
                 <label for="content" class="form-label">내용</label>
                 <textarea name="content" class="form-control" rows="5"></textarea>
             </div>
+            <input type=file name=image>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button type="submit" class="btn btn-primary">작성</button>
             </div>
