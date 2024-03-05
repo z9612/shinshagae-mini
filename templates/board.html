@@ -49,8 +49,14 @@
                 {{ pagination.links }}
             </ul>
         </div>
-
-        <a class="btn btn-outline-info float-end mt-3" href="/makepost">글쓰기</a>
+		
+	<div>
+                <a class="btn btn-outline-info float-end mt-3" href="/makepost">글쓰기</a>
+                <form action="/board", method='POST'>
+                        <input type="text" name="posttitle" >
+                        <button type="submit">검색</button>
+                </form>
+        </div>
     </div>
 
     {% include 'common_script.html' %}
