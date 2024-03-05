@@ -4,6 +4,7 @@ import logging
 from logging.config import fileConfig
 import math
 import pymysql
+import boto3
 
 db = pymysql.connect( # DB mysql 연결
     user='nana',
@@ -19,16 +20,25 @@ logger = logging.getLogger(__name__)
 board_bp = Blueprint("board", __name__)
 
 
-@board_bp.route("/board")
+@board_bp.route("/board", methods=['GET', 'POST'])
 def board():  # 게시판 목록
     logger.info("open board - event_id: 게시판열람")
     page, per_page, offset = get_page_args(
         page_parameter="page", per_page_parameter="per_page"
     )
-    sql = """select b.postno,u.userid,b.title,b.content,b.view_count,b.comment_count,b.create_date,b.modify_date 
-            from board b,user u 
-            where b.userno=u.userno 
-            order by b.postno desc"""  # 게시판 목록 불러오는 sql
+    title = request.form.get("posttitle")
+    print("title 값: ",title)
+    print("title 자료형:",type(title) )
+    if title != None :
+        sql =f"""select b.postno,u.userid,b.title,b.content,b.view_count,b.comment_count,b.create_date,b.modify_date
+            from board b,user u
+            where b.userno=u.userno and b.title Like '%{title}%'
+            order by b.postno desc"""
+    else:
+        sql = """select b.postno,u.userid,b.title,b.content,b.view_count,b.comment_count,b.create_date,b.modify_date
+            from board b,user u
+            where b.userno=u.userno
+            order by b.postno desc"""
     cur.execute(sql)
     data_list = cur.fetchall()
     total = len(data_list)
@@ -44,6 +54,7 @@ def board():  # 게시판 목록
     return render_template(
         "board.html", data_list=paginated_data, pagination=pagination_instance
     )
+    
 
 
 def get_pagination(
@@ -61,8 +72,18 @@ def get_pagination(
 
 @board_bp.route("/makepost")
 def makepost():  # 게시물 작성 페이지 이동
-    return render_template("dnf주소/makepost.html")
+    return render_template("/makepost.html")
 
+@board_bp.route("/searchpost")
+def searchpost(): #게시글 검색후 보여주기
+    logger.info("search board - event_id: 게시판검색")
+    if request.form.get("posttitle"):
+        title = request.form.get("posttitle")
+        sql = "Select * from board where %s "
+        cur.excute(sql,title)
+        date_list = cur.fetchall()
+        total = len(data_list)
+    return render_template("board.html")
 
 @board_bp.route("/write_post_action", methods=["GET", "POST"])
 def write_post_action():  # 게시물 작성 버튼 -> sql에 작성 내용 입력
@@ -72,11 +93,22 @@ def write_post_action():  # 게시물 작성 버튼 -> sql에 작성 내용 입�
         title = request.form.get("title")
         writer = session["login_info"].get("userno", None)
         content = request.form.get("content")
-        sql = "INSERT INTO board (title, content, userno) VALUES(%s, %s, %s)"
-        values = (title, content, writer)
+        image = request.files["image"]
+        if image :
+            s3 = boto3.client('s3')
+            s3.put_object(
+                Bucket = 'project-s3-ssg',
+                Body = image,
+                Key = image.filename,
+                ContentType = image.content_type)
+        else: print("이미지 업음")
+        sql = "INSERT INTO board (title, content, userno,image_path) VALUES(%s, %s, %s, %s)"
+        values = (title, content, writer, image.filename)
         cur.execute(sql, values)
         db.commit()
         return redirect(url_for("board.board"))
+
+
 
 
 @board_bp.route("/updatepost/<int:postno>", methods=["GET", "POST"])
