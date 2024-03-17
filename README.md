@@ -29,4 +29,3 @@
 ![image](https://github.com/z9612/shinshagae-mini/assets/50051891/0d7bf274-c367-4fb9-93e1-f20de0f2f1b6)
 ![image](https://github.com/z9612/shinshagae-mini/assets/50051891/262ea1be-9973-4eac-bd0e-1441d40d7701)
 ![image](https://github.com/z9612/shinshagae-mini/assets/50051891/8c5fe5dd-d0c8-4bb4-a159-070b3abd79b2)
-![image](https://github.com/z9612/shinshagae-mini/assets/50051891/629b702b-2d2b-46b5-a8b7-747553118227)
