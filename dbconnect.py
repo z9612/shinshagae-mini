@@ -6,7 +6,7 @@ def db_conn():
     db = pymysql.connect(
     user = 'nana',
     passwd = 'nana1234',
-    host = 'database-1.cjy2bjpz7ukq.ap-northeast-2.rds.amazonaws.com',
+    host = 'database-1.cvgatyvcfvop.ap-northeast-2.rds.amazonaws.com',
     db = 'project',
     charset = 'utf8',
     autocommit = True

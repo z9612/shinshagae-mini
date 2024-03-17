@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'common_head.html' %}
+    <title>채팅방{{ result1[0] }}</title>
+    <H1 class="display-4">채팅방 {{result1[0]}}에 오신걸 환영합니다</H1>
+</head>
+<body class="container mt-5">
+    <form action="/chatroom/chatting" method="post">
+        <div class="mb-3">
+            <label for="user" class="form-label">유저:</label>
+            <span>{{session['login_info'].userid}}</span>
+        </div>
+        <div class="mb-3">
+            <label for="chatid" class="form-label">채팅방:</label>
+            <input name="chatid" class="form-control" value="{{result1[0]}}">
+        </div>
+        <input type="hidden" name="userno" value="{{session['login_info'].userno}}">
+        <div class="mb-3">
+            <label for="text" class="form-label">메시지를 입력하세요:</label>
+            <input id="text" class="form-control" size="80" placeholder="메시지를 입력하세요!" name="text">
+        </div>
+        <button type="submit" class="btn btn-primary">메세지 입력하여 채팅 진행하기</button>
+    </form>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="mt-4">{{session['login_info'].userid}}의 일정</h4>
+            {% for i in range(3, 3 + result1[2]) %}
+            <div class="row mb-3">
+                <div class="col-md-6">{{ result1[i] }}</div>
+                <div class="col-md-6">
+                    <form action="/chatroom/dateroom" method="post">
+			<input type="hidden" name="userid" value="{{session['login_info'].userid}}">
+                        <input type="hidden" name="chatid" value="{{ result1[0] }}">
+                        <input type="hidden" name="userno" value="{{ result1[1] }}">
+                        <input type="hidden" name="event" value="{{ result1[i] }}">
+                        <button type="submit" class="btn btn-primary">일정 공유하기</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+            <form action="/chatroom/share" method="post">
+                <input name="chatid" value="{{result1[0]}}" type="hidden">
+                <input type="hidden" name="userno" value="{{session['login_info'].userno}}">
+		 
+                <button type="submit" class="btn btn-primary">채팅방 일정 보기</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="/chatroom" onclick="leave_room();" class="btn btn-secondary mt-3">채팅방 나가기</a>
+        </div>
+        <div class="col-md-6">
+            <a href="/" onclick="leave_room();" class="btn btn-secondary mt-3">초기화면으로</a>
+        </div>
+    </div>
+</body>
+    {% include 'common_script.html' %}  
+</html>

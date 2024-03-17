@@ -5,7 +5,7 @@ import pymysql
 def db_conn():
     db=pymysql.connect(
 
-    host='database-1.cjy2bjpz7ukq.ap-northeast-2.rds.amazonaws.com',
+    host='database-1.cvgatyvcfvop.ap-northeast-2.rds.amazonaws.com',
     user='nana',
     password='nana1234',
     db='project',
