@@ -2,9 +2,7 @@ import secrets
 import db_config 
 from flask import *
 from flask_cors import CORS
-from board import board_bp
 from userlogin import user_bp
-from chat_main import chat_bp
 import logging
 from logging.config import fileConfig
 
@@ -21,9 +19,7 @@ CORS(app)
 db_config.db_connection.get_db()
 event_dao = db_config.EventDao()
 
-app.register_blueprint(board_bp)
 app.register_blueprint(user_bp)
-app.register_blueprint(chat_bp)
 
 @app.route('/')
 def home():
